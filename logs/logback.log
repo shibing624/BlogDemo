@@ -1,0 +1,444 @@
+2016-08-11 08:59:19,872 [main] INFO  [org.xm.segword.util.WordConfTools] - 开始加载配置文件
+2016-08-11 08:59:19,900 [main] INFO  [org.xm.segword.util.WordConfTools] - 加载配置文件：word.conf
+2016-08-11 08:59:19,920 [main] INFO  [org.xm.segword.util.WordConfTools] - 未找到配置文件：word.local.conf
+2016-08-11 08:59:19,921 [main] INFO  [org.xm.segword.util.WordConfTools] - 配置文件加载完毕，耗时21 毫秒，配置项数目：33
+2016-08-11 08:59:19,921 [main] INFO  [org.xm.segword.util.WordConfTools] - 配置信息：
+2016-08-11 08:59:20,125 [main] INFO  [org.xm.segword.util.WordConfTools] - 1、auto.detect=true
+2016-08-11 08:59:20,126 [main] INFO  [org.xm.segword.util.WordConfTools] - 2、bigram.double.array.trie.size=5300000
+2016-08-11 08:59:20,126 [main] INFO  [org.xm.segword.util.WordConfTools] - 3、bigram.path=classpath:bigram.txt
+2016-08-11 08:59:20,126 [main] INFO  [org.xm.segword.util.WordConfTools] - 4、dic.class=org.xm.segword.dictionary.impl.DoubleArrayDictionaryTrie
+2016-08-11 08:59:20,126 [main] INFO  [org.xm.segword.util.WordConfTools] - 5、dic.dump.path=
+2016-08-11 08:59:20,126 [main] INFO  [org.xm.segword.util.WordConfTools] - 6、dic.path=classpath:dic.txt
+2016-08-11 08:59:20,126 [main] INFO  [org.xm.segword.util.WordConfTools] - 7、dictionary.trie.index.size=24000
+2016-08-11 08:59:20,126 [main] INFO  [org.xm.segword.util.WordConfTools] - 8、double.array.dictionary.trie.size=2600000
+2016-08-11 08:59:20,126 [main] INFO  [org.xm.segword.util.WordConfTools] - 9、intercept.length=16
+2016-08-11 08:59:20,126 [main] INFO  [org.xm.segword.util.WordConfTools] - 10、keep.punctuation=false
+2016-08-11 08:59:20,126 [main] INFO  [org.xm.segword.util.WordConfTools] - 11、keep.whitespace=false
+2016-08-11 08:59:20,126 [main] INFO  [org.xm.segword.util.WordConfTools] - 12、ngram=bigram
+2016-08-11 08:59:20,126 [main] INFO  [org.xm.segword.util.WordConfTools] - 13、parallel.seg=true
+2016-08-11 08:59:20,126 [main] INFO  [org.xm.segword.util.WordConfTools] - 14、part.of.speech.des.path=classpath:part_of_speech_des.txt
+2016-08-11 08:59:20,126 [main] INFO  [org.xm.segword.util.WordConfTools] - 15、part.of.speech.dic.path=classpath:part_of_speech_dic.txt
+2016-08-11 08:59:20,126 [main] INFO  [org.xm.segword.util.WordConfTools] - 16、person.name.recognize=true
+2016-08-11 08:59:20,127 [main] INFO  [org.xm.segword.util.WordConfTools] - 17、punctuation.path=classpath:punctuation.txt
+2016-08-11 08:59:20,127 [main] INFO  [org.xm.segword.util.WordConfTools] - 18、quantifier.path=classpath:quantifier.txt
+2016-08-11 08:59:20,127 [main] INFO  [org.xm.segword.util.WordConfTools] - 19、recognition.tool.enabled=true
+2016-08-11 08:59:20,127 [main] INFO  [org.xm.segword.util.WordConfTools] - 20、redis.host=localhost
+2016-08-11 08:59:20,127 [main] INFO  [org.xm.segword.util.WordConfTools] - 21、redis.port=6379
+2016-08-11 08:59:20,127 [main] INFO  [org.xm.segword.util.WordConfTools] - 22、stopwords.path=classpath:stopwords.txt
+2016-08-11 08:59:20,127 [main] INFO  [org.xm.segword.util.WordConfTools] - 23、surname.path=classpath:surname.txt
+2016-08-11 08:59:20,127 [main] INFO  [org.xm.segword.util.WordConfTools] - 24、tagging.antonym=false
+2016-08-11 08:59:20,127 [main] INFO  [org.xm.segword.util.WordConfTools] - 25、tagging.pinyin.acronym=false
+2016-08-11 08:59:20,127 [main] INFO  [org.xm.segword.util.WordConfTools] - 26、tagging.pinyin.full=false
+2016-08-11 08:59:20,127 [main] INFO  [org.xm.segword.util.WordConfTools] - 27、tagging.synonym=false
+2016-08-11 08:59:20,127 [main] INFO  [org.xm.segword.util.WordConfTools] - 28、trigram.double.array.trie.size=9800000
+2016-08-11 08:59:20,127 [main] INFO  [org.xm.segword.util.WordConfTools] - 29、trigram.path=classpath:trigram.txt
+2016-08-11 08:59:20,127 [main] INFO  [org.xm.segword.util.WordConfTools] - 30、word.antonym.path=classpath:word_antonym.txt
+2016-08-11 08:59:20,127 [main] INFO  [org.xm.segword.util.WordConfTools] - 31、word.refine.combine.max.length=3
+2016-08-11 08:59:20,128 [main] INFO  [org.xm.segword.util.WordConfTools] - 32、word.refine.path=classpath:word_refine.txt
+2016-08-11 08:59:20,128 [main] INFO  [org.xm.segword.util.WordConfTools] - 33、word.synonym.path=classpath:word_synonym.txt
+2016-08-11 08:59:20,130 [main] INFO  [org.xm.segword.dictionary.DictionaryFactory] - dic.class=org.xm.segword.dictionary.impl.DoubleArrayDictionaryTrie
+2016-08-11 09:00:50,400 [main] INFO  [org.xm.segword.util.WordConfTools] - 开始加载配置文件
+2016-08-11 09:00:50,407 [main] INFO  [org.xm.segword.util.WordConfTools] - 加载配置文件：word.conf
+2016-08-11 09:00:50,408 [main] INFO  [org.xm.segword.util.WordConfTools] - 未找到配置文件：word.local.conf
+2016-08-11 09:00:50,409 [main] INFO  [org.xm.segword.util.WordConfTools] - 配置文件加载完毕，耗时2 毫秒，配置项数目：33
+2016-08-11 09:00:50,409 [main] INFO  [org.xm.segword.util.WordConfTools] - 配置信息：
+2016-08-11 09:00:50,456 [main] INFO  [org.xm.segword.util.WordConfTools] - 1、auto.detect=true
+2016-08-11 09:00:50,457 [main] INFO  [org.xm.segword.util.WordConfTools] - 2、bigram.double.array.trie.size=5300000
+2016-08-11 09:00:50,457 [main] INFO  [org.xm.segword.util.WordConfTools] - 3、bigram.path=classpath:bigram.txt
+2016-08-11 09:00:50,457 [main] INFO  [org.xm.segword.util.WordConfTools] - 4、dic.class=org.xm.segword.dictionary.impl.DoubleArrayDictionaryTrie
+2016-08-11 09:00:50,457 [main] INFO  [org.xm.segword.util.WordConfTools] - 5、dic.dump.path=
+2016-08-11 09:00:50,457 [main] INFO  [org.xm.segword.util.WordConfTools] - 6、dic.path=classpath:dic.txt
+2016-08-11 09:00:50,457 [main] INFO  [org.xm.segword.util.WordConfTools] - 7、dictionary.trie.index.size=24000
+2016-08-11 09:00:50,457 [main] INFO  [org.xm.segword.util.WordConfTools] - 8、double.array.dictionary.trie.size=2600000
+2016-08-11 09:00:50,457 [main] INFO  [org.xm.segword.util.WordConfTools] - 9、intercept.length=16
+2016-08-11 09:00:50,457 [main] INFO  [org.xm.segword.util.WordConfTools] - 10、keep.punctuation=false
+2016-08-11 09:00:50,457 [main] INFO  [org.xm.segword.util.WordConfTools] - 11、keep.whitespace=false
+2016-08-11 09:00:50,457 [main] INFO  [org.xm.segword.util.WordConfTools] - 12、ngram=bigram
+2016-08-11 09:00:50,457 [main] INFO  [org.xm.segword.util.WordConfTools] - 13、parallel.seg=true
+2016-08-11 09:00:50,457 [main] INFO  [org.xm.segword.util.WordConfTools] - 14、part.of.speech.des.path=classpath:part_of_speech_des.txt
+2016-08-11 09:00:50,457 [main] INFO  [org.xm.segword.util.WordConfTools] - 15、part.of.speech.dic.path=classpath:part_of_speech_dic.txt
+2016-08-11 09:00:50,457 [main] INFO  [org.xm.segword.util.WordConfTools] - 16、person.name.recognize=true
+2016-08-11 09:00:50,457 [main] INFO  [org.xm.segword.util.WordConfTools] - 17、punctuation.path=classpath:punctuation.txt
+2016-08-11 09:00:50,458 [main] INFO  [org.xm.segword.util.WordConfTools] - 18、quantifier.path=classpath:quantifier.txt
+2016-08-11 09:00:50,458 [main] INFO  [org.xm.segword.util.WordConfTools] - 19、recognition.tool.enabled=true
+2016-08-11 09:00:50,458 [main] INFO  [org.xm.segword.util.WordConfTools] - 20、redis.host=localhost
+2016-08-11 09:00:50,458 [main] INFO  [org.xm.segword.util.WordConfTools] - 21、redis.port=6379
+2016-08-11 09:00:50,458 [main] INFO  [org.xm.segword.util.WordConfTools] - 22、stopwords.path=classpath:stopwords.txt
+2016-08-11 09:00:50,458 [main] INFO  [org.xm.segword.util.WordConfTools] - 23、surname.path=classpath:surname.txt
+2016-08-11 09:00:50,458 [main] INFO  [org.xm.segword.util.WordConfTools] - 24、tagging.antonym=false
+2016-08-11 09:00:50,458 [main] INFO  [org.xm.segword.util.WordConfTools] - 25、tagging.pinyin.acronym=false
+2016-08-11 09:00:50,458 [main] INFO  [org.xm.segword.util.WordConfTools] - 26、tagging.pinyin.full=false
+2016-08-11 09:00:50,458 [main] INFO  [org.xm.segword.util.WordConfTools] - 27、tagging.synonym=false
+2016-08-11 09:00:50,458 [main] INFO  [org.xm.segword.util.WordConfTools] - 28、trigram.double.array.trie.size=9800000
+2016-08-11 09:00:50,458 [main] INFO  [org.xm.segword.util.WordConfTools] - 29、trigram.path=classpath:trigram.txt
+2016-08-11 09:00:50,458 [main] INFO  [org.xm.segword.util.WordConfTools] - 30、word.antonym.path=classpath:word_antonym.txt
+2016-08-11 09:00:50,459 [main] INFO  [org.xm.segword.util.WordConfTools] - 31、word.refine.combine.max.length=3
+2016-08-11 09:00:50,459 [main] INFO  [org.xm.segword.util.WordConfTools] - 32、word.refine.path=classpath:word_refine.txt
+2016-08-11 09:00:50,459 [main] INFO  [org.xm.segword.util.WordConfTools] - 33、word.synonym.path=classpath:word_synonym.txt
+2016-08-11 09:00:50,460 [main] INFO  [org.xm.segword.util.AutoDetector] - 开始加载资源
+2016-08-11 09:00:50,461 [main] INFO  [org.xm.segword.util.AutoDetector] - classpath:word_refine.txt
+2016-08-11 09:00:50,461 [main] INFO  [org.xm.segword.util.AutoDetector] - 类路径资源：word_refine.txt
+2016-08-11 09:00:50,461 [main] INFO  [org.xm.segword.util.AutoDetector] - 类路径资源URL：file:/D:/PyCredit/Blog/BlogMath/BlogCode/target/classes/word_refine.txt
+2016-08-11 09:00:50,461 [main] INFO  [org.xm.segword.util.AutoDetector] - 加载资源：D:\PyCredit\Blog\BlogMath\BlogCode\target\classes\word_refine.txt
+2016-08-11 09:00:50,462 [main] INFO  [org.xm.segword.util.AutoDetector] - 监控文件：D:\PyCredit\Blog\BlogMath\BlogCode\target\classes\word_refine.txt
+2016-08-11 09:00:50,473 [main] INFO  [org.xm.segword.util.DirectoryWatcher] - 注册事件：ENTRY_MODIFY
+2016-08-11 09:00:50,473 [main] INFO  [org.xm.segword.util.DirectoryWatcher] - 注册事件：ENTRY_DELETE
+2016-08-11 09:00:50,585 [main] INFO  [org.xm.segword.util.DirectoryWatcher] - 监控目录:D:\PyCredit\Blog\BlogMath\BlogCode\target\classes
+2016-08-11 09:00:50,587 [main] INFO  [org.xm.segword.util.AutoDetector] - 加载资源 4 行
+2016-08-11 09:00:50,588 [main] INFO  [org.xm.segword.segmentation.WordRefiner] - 初始化WordRefiner
+2016-08-11 09:00:50,588 [main] INFO  [org.xm.segword.segmentation.WordRefiner] - WordRefiner初始化完毕，数据条数：4
+2016-08-11 09:00:50,588 [main] INFO  [org.xm.segword.util.AutoDetector] - 完成加载资源，耗时127 毫秒
+2016-08-11 09:00:50,589 [main] INFO  [org.xm.segword.segmentation.SegmentationFactory] - 构造分词实现类：org.xm.segword.segmentation.impl.BidirectionalMaximumMatching
+2016-08-11 09:00:50,621 [main] INFO  [org.xm.segword.segmentation.SegmentationFactory] - 构造分词实现类失败：
+java.lang.ClassNotFoundException: org.xm.segword.segmentation.impl.BidirectionalMaximumMatching
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381) ~[na:1.8.0_91]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424) ~[na:1.8.0_91]
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:331) ~[na:1.8.0_91]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357) ~[na:1.8.0_91]
+	at java.lang.Class.forName0(Native Method) ~[na:1.8.0_91]
+	at java.lang.Class.forName(Class.java:264) ~[na:1.8.0_91]
+	at org.xm.segword.segmentation.SegmentationFactory.getSegmentation(SegmentationFactory.java:46) ~[classes/:na]
+	at org.xm.segword.segmentation.WordRefiner.main(WordRefiner.java:199) [classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_91]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_91]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_91]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_91]
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:144) [idea_rt.jar:na]
+2016-08-11 09:01:40,875 [main] INFO  [org.xm.segword.util.WordConfTools] - 开始加载配置文件
+2016-08-11 09:01:40,881 [main] INFO  [org.xm.segword.util.WordConfTools] - 加载配置文件：word.conf
+2016-08-11 09:01:40,888 [main] INFO  [org.xm.segword.util.WordConfTools] - 未找到配置文件：word.local.conf
+2016-08-11 09:01:40,890 [main] INFO  [org.xm.segword.util.WordConfTools] - 配置文件加载完毕，耗时9 毫秒，配置项数目：33
+2016-08-11 09:01:40,890 [main] INFO  [org.xm.segword.util.WordConfTools] - 配置信息：
+2016-08-11 09:01:40,946 [main] INFO  [org.xm.segword.util.WordConfTools] - 1、auto.detect=true
+2016-08-11 09:01:40,947 [main] INFO  [org.xm.segword.util.WordConfTools] - 2、bigram.double.array.trie.size=5300000
+2016-08-11 09:01:40,947 [main] INFO  [org.xm.segword.util.WordConfTools] - 3、bigram.path=classpath:bigram.txt
+2016-08-11 09:01:40,947 [main] INFO  [org.xm.segword.util.WordConfTools] - 4、dic.class=org.xm.segword.dictionary.impl.DoubleArrayDictionaryTrie
+2016-08-11 09:01:40,947 [main] INFO  [org.xm.segword.util.WordConfTools] - 5、dic.dump.path=
+2016-08-11 09:01:40,947 [main] INFO  [org.xm.segword.util.WordConfTools] - 6、dic.path=classpath:dic.txt
+2016-08-11 09:01:40,947 [main] INFO  [org.xm.segword.util.WordConfTools] - 7、dictionary.trie.index.size=24000
+2016-08-11 09:01:40,947 [main] INFO  [org.xm.segword.util.WordConfTools] - 8、double.array.dictionary.trie.size=2600000
+2016-08-11 09:01:40,947 [main] INFO  [org.xm.segword.util.WordConfTools] - 9、intercept.length=16
+2016-08-11 09:01:40,947 [main] INFO  [org.xm.segword.util.WordConfTools] - 10、keep.punctuation=false
+2016-08-11 09:01:40,947 [main] INFO  [org.xm.segword.util.WordConfTools] - 11、keep.whitespace=false
+2016-08-11 09:01:40,947 [main] INFO  [org.xm.segword.util.WordConfTools] - 12、ngram=bigram
+2016-08-11 09:01:40,947 [main] INFO  [org.xm.segword.util.WordConfTools] - 13、parallel.seg=true
+2016-08-11 09:01:40,947 [main] INFO  [org.xm.segword.util.WordConfTools] - 14、part.of.speech.des.path=classpath:part_of_speech_des.txt
+2016-08-11 09:01:40,948 [main] INFO  [org.xm.segword.util.WordConfTools] - 15、part.of.speech.dic.path=classpath:part_of_speech_dic.txt
+2016-08-11 09:01:40,948 [main] INFO  [org.xm.segword.util.WordConfTools] - 16、person.name.recognize=true
+2016-08-11 09:01:40,948 [main] INFO  [org.xm.segword.util.WordConfTools] - 17、punctuation.path=classpath:punctuation.txt
+2016-08-11 09:01:40,948 [main] INFO  [org.xm.segword.util.WordConfTools] - 18、quantifier.path=classpath:quantifier.txt
+2016-08-11 09:01:40,948 [main] INFO  [org.xm.segword.util.WordConfTools] - 19、recognition.tool.enabled=true
+2016-08-11 09:01:40,948 [main] INFO  [org.xm.segword.util.WordConfTools] - 20、redis.host=localhost
+2016-08-11 09:01:40,948 [main] INFO  [org.xm.segword.util.WordConfTools] - 21、redis.port=6379
+2016-08-11 09:01:40,948 [main] INFO  [org.xm.segword.util.WordConfTools] - 22、stopwords.path=classpath:stopwords.txt
+2016-08-11 09:01:40,948 [main] INFO  [org.xm.segword.util.WordConfTools] - 23、surname.path=classpath:surname.txt
+2016-08-11 09:01:40,948 [main] INFO  [org.xm.segword.util.WordConfTools] - 24、tagging.antonym=false
+2016-08-11 09:01:40,948 [main] INFO  [org.xm.segword.util.WordConfTools] - 25、tagging.pinyin.acronym=false
+2016-08-11 09:01:40,948 [main] INFO  [org.xm.segword.util.WordConfTools] - 26、tagging.pinyin.full=false
+2016-08-11 09:01:40,948 [main] INFO  [org.xm.segword.util.WordConfTools] - 27、tagging.synonym=false
+2016-08-11 09:01:40,948 [main] INFO  [org.xm.segword.util.WordConfTools] - 28、trigram.double.array.trie.size=9800000
+2016-08-11 09:01:40,948 [main] INFO  [org.xm.segword.util.WordConfTools] - 29、trigram.path=classpath:trigram.txt
+2016-08-11 09:01:40,948 [main] INFO  [org.xm.segword.util.WordConfTools] - 30、word.antonym.path=classpath:word_antonym.txt
+2016-08-11 09:01:40,948 [main] INFO  [org.xm.segword.util.WordConfTools] - 31、word.refine.combine.max.length=3
+2016-08-11 09:01:40,948 [main] INFO  [org.xm.segword.util.WordConfTools] - 32、word.refine.path=classpath:word_refine.txt
+2016-08-11 09:01:40,948 [main] INFO  [org.xm.segword.util.WordConfTools] - 33、word.synonym.path=classpath:word_synonym.txt
+2016-08-11 09:01:40,950 [main] INFO  [org.xm.segword.util.AutoDetector] - 开始加载资源
+2016-08-11 09:01:40,950 [main] INFO  [org.xm.segword.util.AutoDetector] - classpath:word_refine.txt
+2016-08-11 09:01:40,951 [main] INFO  [org.xm.segword.util.AutoDetector] - 类路径资源：word_refine.txt
+2016-08-11 09:01:40,951 [main] INFO  [org.xm.segword.util.AutoDetector] - 类路径资源URL：file:/D:/PyCredit/Blog/BlogMath/BlogCode/target/classes/word_refine.txt
+2016-08-11 09:01:40,951 [main] INFO  [org.xm.segword.util.AutoDetector] - 加载资源：D:\PyCredit\Blog\BlogMath\BlogCode\target\classes\word_refine.txt
+2016-08-11 09:01:40,951 [main] INFO  [org.xm.segword.util.AutoDetector] - 监控文件：D:\PyCredit\Blog\BlogMath\BlogCode\target\classes\word_refine.txt
+2016-08-11 09:01:40,955 [main] INFO  [org.xm.segword.util.DirectoryWatcher] - 注册事件：ENTRY_MODIFY
+2016-08-11 09:01:40,955 [main] INFO  [org.xm.segword.util.DirectoryWatcher] - 注册事件：ENTRY_DELETE
+2016-08-11 09:01:40,964 [main] INFO  [org.xm.segword.util.DirectoryWatcher] - 监控目录:D:\PyCredit\Blog\BlogMath\BlogCode\target\classes
+2016-08-11 09:01:40,967 [main] INFO  [org.xm.segword.util.AutoDetector] - 加载资源 4 行
+2016-08-11 09:01:40,968 [main] INFO  [org.xm.segword.segmentation.WordRefiner] - 初始化WordRefiner
+2016-08-11 09:01:40,968 [main] INFO  [org.xm.segword.segmentation.WordRefiner] - WordRefiner初始化完毕，数据条数：4
+2016-08-11 09:01:40,968 [main] INFO  [org.xm.segword.util.AutoDetector] - 完成加载资源，耗时18 毫秒
+2016-08-11 09:01:40,970 [main] INFO  [org.xm.segword.segmentation.SegmentationFactory] - 构造分词实现类：org.xm.segword.segmentation.impl.BidirectionalMaximumMatching
+2016-08-11 09:01:40,975 [main] INFO  [org.xm.segword.segmentation.SegmentationFactory] - 构造分词实现类失败：
+java.lang.ClassNotFoundException: org.xm.segword.segmentation.impl.BidirectionalMaximumMatching
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381) ~[na:1.8.0_91]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424) ~[na:1.8.0_91]
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:331) ~[na:1.8.0_91]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357) ~[na:1.8.0_91]
+	at java.lang.Class.forName0(Native Method) ~[na:1.8.0_91]
+	at java.lang.Class.forName(Class.java:264) ~[na:1.8.0_91]
+	at org.xm.segword.segmentation.SegmentationFactory.getSegmentation(SegmentationFactory.java:46) ~[classes/:na]
+	at org.xm.segword.segmentation.WordRefiner.main(WordRefiner.java:199) [classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_91]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_91]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_91]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_91]
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:144) [idea_rt.jar:na]
+2016-08-11 09:03:49,026 [main] INFO  [org.xm.segword.util.WordConfTools] - 开始加载配置文件
+2016-08-11 09:03:49,030 [main] INFO  [org.xm.segword.util.WordConfTools] - 加载配置文件：word.conf
+2016-08-11 09:03:49,031 [main] INFO  [org.xm.segword.util.WordConfTools] - 未找到配置文件：word.local.conf
+2016-08-11 09:03:49,031 [main] INFO  [org.xm.segword.util.WordConfTools] - 配置文件加载完毕，耗时1 毫秒，配置项数目：33
+2016-08-11 09:03:49,031 [main] INFO  [org.xm.segword.util.WordConfTools] - 配置信息：
+2016-08-11 09:03:49,074 [main] INFO  [org.xm.segword.util.WordConfTools] - 1、auto.detect=true
+2016-08-11 09:03:49,074 [main] INFO  [org.xm.segword.util.WordConfTools] - 2、bigram.double.array.trie.size=5300000
+2016-08-11 09:03:49,074 [main] INFO  [org.xm.segword.util.WordConfTools] - 3、bigram.path=classpath:bigram.txt
+2016-08-11 09:03:49,074 [main] INFO  [org.xm.segword.util.WordConfTools] - 4、dic.class=org.xm.segword.dictionary.impl.DoubleArrayDictionaryTrie
+2016-08-11 09:03:49,074 [main] INFO  [org.xm.segword.util.WordConfTools] - 5、dic.dump.path=
+2016-08-11 09:03:49,074 [main] INFO  [org.xm.segword.util.WordConfTools] - 6、dic.path=classpath:dic.txt
+2016-08-11 09:03:49,074 [main] INFO  [org.xm.segword.util.WordConfTools] - 7、dictionary.trie.index.size=24000
+2016-08-11 09:03:49,074 [main] INFO  [org.xm.segword.util.WordConfTools] - 8、double.array.dictionary.trie.size=2600000
+2016-08-11 09:03:49,074 [main] INFO  [org.xm.segword.util.WordConfTools] - 9、intercept.length=16
+2016-08-11 09:03:49,074 [main] INFO  [org.xm.segword.util.WordConfTools] - 10、keep.punctuation=false
+2016-08-11 09:03:49,074 [main] INFO  [org.xm.segword.util.WordConfTools] - 11、keep.whitespace=false
+2016-08-11 09:03:49,074 [main] INFO  [org.xm.segword.util.WordConfTools] - 12、ngram=bigram
+2016-08-11 09:03:49,074 [main] INFO  [org.xm.segword.util.WordConfTools] - 13、parallel.seg=true
+2016-08-11 09:03:49,075 [main] INFO  [org.xm.segword.util.WordConfTools] - 14、part.of.speech.des.path=classpath:part_of_speech_des.txt
+2016-08-11 09:03:49,075 [main] INFO  [org.xm.segword.util.WordConfTools] - 15、part.of.speech.dic.path=classpath:part_of_speech_dic.txt
+2016-08-11 09:03:49,075 [main] INFO  [org.xm.segword.util.WordConfTools] - 16、person.name.recognize=true
+2016-08-11 09:03:49,075 [main] INFO  [org.xm.segword.util.WordConfTools] - 17、punctuation.path=classpath:punctuation.txt
+2016-08-11 09:03:49,075 [main] INFO  [org.xm.segword.util.WordConfTools] - 18、quantifier.path=classpath:quantifier.txt
+2016-08-11 09:03:49,075 [main] INFO  [org.xm.segword.util.WordConfTools] - 19、recognition.tool.enabled=true
+2016-08-11 09:03:49,075 [main] INFO  [org.xm.segword.util.WordConfTools] - 20、redis.host=localhost
+2016-08-11 09:03:49,075 [main] INFO  [org.xm.segword.util.WordConfTools] - 21、redis.port=6379
+2016-08-11 09:03:49,075 [main] INFO  [org.xm.segword.util.WordConfTools] - 22、stopwords.path=classpath:stopwords.txt
+2016-08-11 09:03:49,075 [main] INFO  [org.xm.segword.util.WordConfTools] - 23、surname.path=classpath:surname.txt
+2016-08-11 09:03:49,075 [main] INFO  [org.xm.segword.util.WordConfTools] - 24、tagging.antonym=false
+2016-08-11 09:03:49,075 [main] INFO  [org.xm.segword.util.WordConfTools] - 25、tagging.pinyin.acronym=false
+2016-08-11 09:03:49,075 [main] INFO  [org.xm.segword.util.WordConfTools] - 26、tagging.pinyin.full=false
+2016-08-11 09:03:49,075 [main] INFO  [org.xm.segword.util.WordConfTools] - 27、tagging.synonym=false
+2016-08-11 09:03:49,075 [main] INFO  [org.xm.segword.util.WordConfTools] - 28、trigram.double.array.trie.size=9800000
+2016-08-11 09:03:49,075 [main] INFO  [org.xm.segword.util.WordConfTools] - 29、trigram.path=classpath:trigram.txt
+2016-08-11 09:03:49,075 [main] INFO  [org.xm.segword.util.WordConfTools] - 30、word.antonym.path=classpath:word_antonym.txt
+2016-08-11 09:03:49,075 [main] INFO  [org.xm.segword.util.WordConfTools] - 31、word.refine.combine.max.length=3
+2016-08-11 09:03:49,075 [main] INFO  [org.xm.segword.util.WordConfTools] - 32、word.refine.path=classpath:word_refine.txt
+2016-08-11 09:03:49,075 [main] INFO  [org.xm.segword.util.WordConfTools] - 33、word.synonym.path=classpath:word_synonym.txt
+2016-08-11 09:03:49,076 [main] INFO  [org.xm.segword.dictionary.impl.DictionaryTrie] - 初始化词典：org.xm.segword.dictionary.impl.DictionaryTrie
+2016-08-11 09:03:49,077 [main] INFO  [org.xm.segword.dictionary.impl.DictionaryTrie] - A
+2016-08-11 09:03:49,077 [main] INFO  [org.xm.segword.dictionary.impl.DictionaryTrie] - 	P
+2016-08-11 09:03:49,077 [main] INFO  [org.xm.segword.dictionary.impl.DictionaryTrie] - 		D(T)
+2016-08-11 09:03:49,078 [main] INFO  [org.xm.segword.dictionary.impl.DictionaryTrie] - 			P
+2016-08-11 09:03:49,078 [main] INFO  [org.xm.segword.dictionary.impl.DictionaryTrie] - 				l
+2016-08-11 09:03:49,078 [main] INFO  [org.xm.segword.dictionary.impl.DictionaryTrie] - 					a
+2016-08-11 09:03:49,078 [main] INFO  [org.xm.segword.dictionary.impl.DictionaryTrie] - 						t(T)
+2016-08-11 09:03:49,078 [main] INFO  [org.xm.segword.dictionary.impl.DictionaryTrie] - 		P(T)
+2016-08-11 09:03:49,078 [main] INFO  [org.xm.segword.dictionary.impl.DictionaryTrie] - 杨
+2016-08-11 09:03:49,078 [main] INFO  [org.xm.segword.dictionary.impl.DictionaryTrie] - 	家
+2016-08-11 09:03:49,078 [main] INFO  [org.xm.segword.dictionary.impl.DictionaryTrie] - 		将(T)
+2016-08-11 09:03:49,078 [main] INFO  [org.xm.segword.dictionary.impl.DictionaryTrie] - 	尚
+2016-08-11 09:03:49,078 [main] INFO  [org.xm.segword.dictionary.impl.DictionaryTrie] - 		喜(T)
+2016-08-11 09:03:49,078 [main] INFO  [org.xm.segword.dictionary.impl.DictionaryTrie] - 		川(T)
+2016-08-11 09:03:49,078 [main] INFO  [org.xm.segword.dictionary.impl.DictionaryTrie] - 		昆(T)
+2016-08-11 09:03:49,079 [main] INFO  [org.xm.segword.dictionary.impl.DictionaryTrie] - 中
+2016-08-11 09:03:49,079 [main] INFO  [org.xm.segword.dictionary.impl.DictionaryTrie] - 	华(T)
+2016-08-11 09:03:49,079 [main] INFO  [org.xm.segword.dictionary.impl.DictionaryTrie] - 		人
+2016-08-11 09:03:49,079 [main] INFO  [org.xm.segword.dictionary.impl.DictionaryTrie] - 			民
+2016-08-11 09:03:49,079 [main] INFO  [org.xm.segword.dictionary.impl.DictionaryTrie] - 				共
+2016-08-11 09:03:49,079 [main] INFO  [org.xm.segword.dictionary.impl.DictionaryTrie] - 					和
+2016-08-11 09:03:49,079 [main] INFO  [org.xm.segword.dictionary.impl.DictionaryTrie] - 						国(T)
+2016-08-11 09:03:49,079 [main] INFO  [org.xm.segword.dictionary.impl.DictionaryTrie] - 				打
+2016-08-11 09:03:49,079 [main] INFO  [org.xm.segword.dictionary.impl.DictionaryTrie] - 					太
+2016-08-11 09:03:49,082 [main] INFO  [org.xm.segword.dictionary.impl.DictionaryTrie] - 						极(T)
+2016-08-11 09:03:49,082 [main] INFO  [org.xm.segword.dictionary.impl.DictionaryTrie] - 	心
+2016-08-11 09:03:49,082 [main] INFO  [org.xm.segword.dictionary.impl.DictionaryTrie] - 		思
+2016-08-11 09:03:49,082 [main] INFO  [org.xm.segword.dictionary.impl.DictionaryTrie] - 			想(T)
+2016-08-11 09:03:49,082 [main] INFO  [org.xm.segword.dictionary.impl.DictionaryTrie] - [中华, 中心]
+2016-08-11 09:03:49,082 [main] INFO  [org.xm.segword.dictionary.impl.DictionaryTrie] - [中华人]
+2016-08-11 09:03:49,082 [main] INFO  [org.xm.segword.dictionary.impl.DictionaryTrie] - [杨家, 杨尚]
+2016-08-11 09:03:49,082 [main] INFO  [org.xm.segword.dictionary.impl.DictionaryTrie] - [杨尚喜, 杨尚川, 杨尚昆]
+2016-08-11 09:03:58,850 [main] INFO  [org.xm.segword.util.WordConfTools] - 开始加载配置文件
+2016-08-11 09:03:58,856 [main] INFO  [org.xm.segword.util.WordConfTools] - 加载配置文件：word.conf
+2016-08-11 09:03:58,857 [main] INFO  [org.xm.segword.util.WordConfTools] - 未找到配置文件：word.local.conf
+2016-08-11 09:03:58,857 [main] INFO  [org.xm.segword.util.WordConfTools] - 配置文件加载完毕，耗时1 毫秒，配置项数目：33
+2016-08-11 09:03:58,857 [main] INFO  [org.xm.segword.util.WordConfTools] - 配置信息：
+2016-08-11 09:03:58,907 [main] INFO  [org.xm.segword.util.WordConfTools] - 1、auto.detect=true
+2016-08-11 09:03:58,908 [main] INFO  [org.xm.segword.util.WordConfTools] - 2、bigram.double.array.trie.size=5300000
+2016-08-11 09:03:58,909 [main] INFO  [org.xm.segword.util.WordConfTools] - 3、bigram.path=classpath:bigram.txt
+2016-08-11 09:03:58,909 [main] INFO  [org.xm.segword.util.WordConfTools] - 4、dic.class=org.xm.segword.dictionary.impl.DoubleArrayDictionaryTrie
+2016-08-11 09:03:58,909 [main] INFO  [org.xm.segword.util.WordConfTools] - 5、dic.dump.path=
+2016-08-11 09:03:58,909 [main] INFO  [org.xm.segword.util.WordConfTools] - 6、dic.path=classpath:dic.txt
+2016-08-11 09:03:58,909 [main] INFO  [org.xm.segword.util.WordConfTools] - 7、dictionary.trie.index.size=24000
+2016-08-11 09:03:58,909 [main] INFO  [org.xm.segword.util.WordConfTools] - 8、double.array.dictionary.trie.size=2600000
+2016-08-11 09:03:58,909 [main] INFO  [org.xm.segword.util.WordConfTools] - 9、intercept.length=16
+2016-08-11 09:03:58,909 [main] INFO  [org.xm.segword.util.WordConfTools] - 10、keep.punctuation=false
+2016-08-11 09:03:58,909 [main] INFO  [org.xm.segword.util.WordConfTools] - 11、keep.whitespace=false
+2016-08-11 09:03:58,909 [main] INFO  [org.xm.segword.util.WordConfTools] - 12、ngram=bigram
+2016-08-11 09:03:58,909 [main] INFO  [org.xm.segword.util.WordConfTools] - 13、parallel.seg=true
+2016-08-11 09:03:58,909 [main] INFO  [org.xm.segword.util.WordConfTools] - 14、part.of.speech.des.path=classpath:part_of_speech_des.txt
+2016-08-11 09:03:58,909 [main] INFO  [org.xm.segword.util.WordConfTools] - 15、part.of.speech.dic.path=classpath:part_of_speech_dic.txt
+2016-08-11 09:03:58,909 [main] INFO  [org.xm.segword.util.WordConfTools] - 16、person.name.recognize=true
+2016-08-11 09:03:58,910 [main] INFO  [org.xm.segword.util.WordConfTools] - 17、punctuation.path=classpath:punctuation.txt
+2016-08-11 09:03:58,910 [main] INFO  [org.xm.segword.util.WordConfTools] - 18、quantifier.path=classpath:quantifier.txt
+2016-08-11 09:03:58,910 [main] INFO  [org.xm.segword.util.WordConfTools] - 19、recognition.tool.enabled=true
+2016-08-11 09:03:58,910 [main] INFO  [org.xm.segword.util.WordConfTools] - 20、redis.host=localhost
+2016-08-11 09:03:58,910 [main] INFO  [org.xm.segword.util.WordConfTools] - 21、redis.port=6379
+2016-08-11 09:03:58,910 [main] INFO  [org.xm.segword.util.WordConfTools] - 22、stopwords.path=classpath:stopwords.txt
+2016-08-11 09:03:58,910 [main] INFO  [org.xm.segword.util.WordConfTools] - 23、surname.path=classpath:surname.txt
+2016-08-11 09:03:58,910 [main] INFO  [org.xm.segword.util.WordConfTools] - 24、tagging.antonym=false
+2016-08-11 09:03:58,910 [main] INFO  [org.xm.segword.util.WordConfTools] - 25、tagging.pinyin.acronym=false
+2016-08-11 09:03:58,910 [main] INFO  [org.xm.segword.util.WordConfTools] - 26、tagging.pinyin.full=false
+2016-08-11 09:03:58,910 [main] INFO  [org.xm.segword.util.WordConfTools] - 27、tagging.synonym=false
+2016-08-11 09:03:58,910 [main] INFO  [org.xm.segword.util.WordConfTools] - 28、trigram.double.array.trie.size=9800000
+2016-08-11 09:03:58,910 [main] INFO  [org.xm.segword.util.WordConfTools] - 29、trigram.path=classpath:trigram.txt
+2016-08-11 09:03:58,910 [main] INFO  [org.xm.segword.util.WordConfTools] - 30、word.antonym.path=classpath:word_antonym.txt
+2016-08-11 09:03:58,910 [main] INFO  [org.xm.segword.util.WordConfTools] - 31、word.refine.combine.max.length=3
+2016-08-11 09:03:58,911 [main] INFO  [org.xm.segword.util.WordConfTools] - 32、word.refine.path=classpath:word_refine.txt
+2016-08-11 09:03:58,911 [main] INFO  [org.xm.segword.util.WordConfTools] - 33、word.synonym.path=classpath:word_synonym.txt
+2016-08-11 09:03:58,912 [main] INFO  [org.xm.segword.dictionary.DictionaryFactory] - dic.class=org.xm.segword.dictionary.impl.DoubleArrayDictionaryTrie
+2016-08-11 09:08:24,691 [main] INFO  [org.xm.segword.util.WordConfTools] - 开始加载配置文件
+2016-08-11 09:08:24,694 [main] INFO  [org.xm.segword.util.WordConfTools] - 加载配置文件：word.conf
+2016-08-11 09:08:24,696 [main] INFO  [org.xm.segword.util.WordConfTools] - 未找到配置文件：word.local.conf
+2016-08-11 09:08:24,696 [main] INFO  [org.xm.segword.util.WordConfTools] - 配置文件加载完毕，耗时2 毫秒，配置项数目：33
+2016-08-11 09:08:24,696 [main] INFO  [org.xm.segword.util.WordConfTools] - 配置信息：
+2016-08-11 09:08:24,743 [main] INFO  [org.xm.segword.util.WordConfTools] - 1、auto.detect=true
+2016-08-11 09:08:24,743 [main] INFO  [org.xm.segword.util.WordConfTools] - 2、bigram.double.array.trie.size=5300000
+2016-08-11 09:08:24,743 [main] INFO  [org.xm.segword.util.WordConfTools] - 3、bigram.path=classpath:bigram.txt
+2016-08-11 09:08:24,743 [main] INFO  [org.xm.segword.util.WordConfTools] - 4、dic.class=org.xm.segword.dictionary.impl.DoubleArrayDictionaryTrie
+2016-08-11 09:08:24,743 [main] INFO  [org.xm.segword.util.WordConfTools] - 5、dic.dump.path=
+2016-08-11 09:08:24,743 [main] INFO  [org.xm.segword.util.WordConfTools] - 6、dic.path=classpath:dic.txt
+2016-08-11 09:08:24,744 [main] INFO  [org.xm.segword.util.WordConfTools] - 7、dictionary.trie.index.size=24000
+2016-08-11 09:08:24,744 [main] INFO  [org.xm.segword.util.WordConfTools] - 8、double.array.dictionary.trie.size=2600000
+2016-08-11 09:08:24,744 [main] INFO  [org.xm.segword.util.WordConfTools] - 9、intercept.length=16
+2016-08-11 09:08:24,744 [main] INFO  [org.xm.segword.util.WordConfTools] - 10、keep.punctuation=false
+2016-08-11 09:08:24,744 [main] INFO  [org.xm.segword.util.WordConfTools] - 11、keep.whitespace=false
+2016-08-11 09:08:24,744 [main] INFO  [org.xm.segword.util.WordConfTools] - 12、ngram=bigram
+2016-08-11 09:08:24,744 [main] INFO  [org.xm.segword.util.WordConfTools] - 13、parallel.seg=true
+2016-08-11 09:08:24,744 [main] INFO  [org.xm.segword.util.WordConfTools] - 14、part.of.speech.des.path=classpath:part_of_speech_des.txt
+2016-08-11 09:08:24,744 [main] INFO  [org.xm.segword.util.WordConfTools] - 15、part.of.speech.dic.path=classpath:part_of_speech_dic.txt
+2016-08-11 09:08:24,744 [main] INFO  [org.xm.segword.util.WordConfTools] - 16、person.name.recognize=true
+2016-08-11 09:08:24,744 [main] INFO  [org.xm.segword.util.WordConfTools] - 17、punctuation.path=classpath:punctuation.txt
+2016-08-11 09:08:24,744 [main] INFO  [org.xm.segword.util.WordConfTools] - 18、quantifier.path=classpath:quantifier.txt
+2016-08-11 09:08:24,744 [main] INFO  [org.xm.segword.util.WordConfTools] - 19、recognition.tool.enabled=true
+2016-08-11 09:08:24,744 [main] INFO  [org.xm.segword.util.WordConfTools] - 20、redis.host=localhost
+2016-08-11 09:08:24,745 [main] INFO  [org.xm.segword.util.WordConfTools] - 21、redis.port=6379
+2016-08-11 09:08:24,745 [main] INFO  [org.xm.segword.util.WordConfTools] - 22、stopwords.path=classpath:stopwords.txt
+2016-08-11 09:08:24,745 [main] INFO  [org.xm.segword.util.WordConfTools] - 23、surname.path=classpath:surname.txt
+2016-08-11 09:08:24,745 [main] INFO  [org.xm.segword.util.WordConfTools] - 24、tagging.antonym=false
+2016-08-11 09:08:24,745 [main] INFO  [org.xm.segword.util.WordConfTools] - 25、tagging.pinyin.acronym=false
+2016-08-11 09:08:24,745 [main] INFO  [org.xm.segword.util.WordConfTools] - 26、tagging.pinyin.full=false
+2016-08-11 09:08:24,745 [main] INFO  [org.xm.segword.util.WordConfTools] - 27、tagging.synonym=false
+2016-08-11 09:08:24,745 [main] INFO  [org.xm.segword.util.WordConfTools] - 28、trigram.double.array.trie.size=9800000
+2016-08-11 09:08:24,745 [main] INFO  [org.xm.segword.util.WordConfTools] - 29、trigram.path=classpath:trigram.txt
+2016-08-11 09:08:24,745 [main] INFO  [org.xm.segword.util.WordConfTools] - 30、word.antonym.path=classpath:word_antonym.txt
+2016-08-11 09:08:24,745 [main] INFO  [org.xm.segword.util.WordConfTools] - 31、word.refine.combine.max.length=3
+2016-08-11 09:08:24,745 [main] INFO  [org.xm.segword.util.WordConfTools] - 32、word.refine.path=classpath:word_refine.txt
+2016-08-11 09:08:24,745 [main] INFO  [org.xm.segword.util.WordConfTools] - 33、word.synonym.path=classpath:word_synonym.txt
+2016-08-11 09:08:24,747 [main] INFO  [org.xm.segword.dictionary.DictionaryFactory] - dic.class=org.xm.segword.dictionary.impl.DoubleArrayDictionaryTrie
+2016-08-11 09:08:24,748 [main] INFO  [org.xm.segword.dictionary.impl.DoubleArrayDictionaryTrie] - 初始化词典：org.xm.segword.dictionary.impl.DoubleArrayDictionaryTrie
+2016-08-11 09:08:24,750 [main] INFO  [org.xm.segword.util.AutoDetector] - 开始加载资源
+2016-08-11 09:08:24,750 [main] INFO  [org.xm.segword.util.AutoDetector] - classpath:dic.txt,classpath:punctuation.txt,classpath:part_of_speech_dic.txt,classpath:word_synonym.txt,classpath:word_antonym.txt
+2016-08-11 09:08:24,751 [main] INFO  [org.xm.segword.util.AutoDetector] - 类路径资源：dic.txt
+2016-08-11 09:08:24,751 [main] INFO  [org.xm.segword.util.AutoDetector] - 类路径资源URL：file:/D:/PyCredit/Blog/BlogMath/BlogCode/target/classes/dic.txt
+2016-08-11 09:08:24,751 [main] INFO  [org.xm.segword.util.AutoDetector] - 加载资源：D:\PyCredit\Blog\BlogMath\BlogCode\target\classes\dic.txt
+2016-08-11 09:08:25,177 [main] INFO  [org.xm.segword.util.AutoDetector] - 监控文件：D:\PyCredit\Blog\BlogMath\BlogCode\target\classes\dic.txt
+2016-08-11 09:08:25,180 [main] INFO  [org.xm.segword.util.DirectoryWatcher] - 注册事件：ENTRY_MODIFY
+2016-08-11 09:08:25,181 [main] INFO  [org.xm.segword.util.DirectoryWatcher] - 注册事件：ENTRY_DELETE
+2016-08-11 09:08:25,193 [main] INFO  [org.xm.segword.util.DirectoryWatcher] - 监控目录:D:\PyCredit\Blog\BlogMath\BlogCode\target\classes
+2016-08-11 09:08:25,216 [main] INFO  [org.xm.segword.util.AutoDetector] - 类路径资源：punctuation.txt
+2016-08-11 09:08:25,216 [main] INFO  [org.xm.segword.util.AutoDetector] - 类路径资源URL：file:/D:/PyCredit/Blog/BlogMath/BlogCode/target/classes/punctuation.txt
+2016-08-11 09:08:25,217 [main] INFO  [org.xm.segword.util.AutoDetector] - 加载资源：D:\PyCredit\Blog\BlogMath\BlogCode\target\classes\punctuation.txt
+2016-08-11 09:08:25,217 [main] INFO  [org.xm.segword.util.AutoDetector] - 监控文件：D:\PyCredit\Blog\BlogMath\BlogCode\target\classes\punctuation.txt
+2016-08-11 09:08:25,218 [main] INFO  [org.xm.segword.util.DirectoryWatcher] - 注册事件：ENTRY_MODIFY
+2016-08-11 09:08:25,218 [main] INFO  [org.xm.segword.util.DirectoryWatcher] - 注册事件：ENTRY_DELETE
+2016-08-11 09:08:25,219 [main] INFO  [org.xm.segword.util.DirectoryWatcher] - 监控目录:D:\PyCredit\Blog\BlogMath\BlogCode\target\classes
+2016-08-11 09:08:25,222 [main] INFO  [org.xm.segword.util.AutoDetector] - 类路径资源：part_of_speech_dic.txt
+2016-08-11 09:08:25,222 [main] INFO  [org.xm.segword.util.AutoDetector] - 类路径资源URL：file:/D:/PyCredit/Blog/BlogMath/BlogCode/target/classes/part_of_speech_dic.txt
+2016-08-11 09:08:25,222 [main] INFO  [org.xm.segword.util.AutoDetector] - 加载资源：D:\PyCredit\Blog\BlogMath\BlogCode\target\classes\part_of_speech_dic.txt
+2016-08-11 09:08:25,688 [main] INFO  [org.xm.segword.util.AutoDetector] - 监控文件：D:\PyCredit\Blog\BlogMath\BlogCode\target\classes\part_of_speech_dic.txt
+2016-08-11 09:08:25,689 [main] INFO  [org.xm.segword.util.DirectoryWatcher] - 注册事件：ENTRY_MODIFY
+2016-08-11 09:08:25,689 [main] INFO  [org.xm.segword.util.DirectoryWatcher] - 注册事件：ENTRY_DELETE
+2016-08-11 09:08:25,689 [main] INFO  [org.xm.segword.util.DirectoryWatcher] - 监控目录:D:\PyCredit\Blog\BlogMath\BlogCode\target\classes
+2016-08-11 09:08:25,699 [main] INFO  [org.xm.segword.util.AutoDetector] - 类路径资源：word_synonym.txt
+2016-08-11 09:08:25,699 [main] INFO  [org.xm.segword.util.AutoDetector] - 类路径资源URL：file:/D:/PyCredit/Blog/BlogMath/BlogCode/target/classes/word_synonym.txt
+2016-08-11 09:08:25,699 [main] INFO  [org.xm.segword.util.AutoDetector] - 加载资源：D:\PyCredit\Blog\BlogMath\BlogCode\target\classes\word_synonym.txt
+2016-08-11 09:08:25,703 [main] INFO  [org.xm.segword.util.AutoDetector] - 监控文件：D:\PyCredit\Blog\BlogMath\BlogCode\target\classes\word_synonym.txt
+2016-08-11 09:08:25,703 [main] INFO  [org.xm.segword.util.DirectoryWatcher] - 注册事件：ENTRY_MODIFY
+2016-08-11 09:08:25,703 [main] INFO  [org.xm.segword.util.DirectoryWatcher] - 注册事件：ENTRY_DELETE
+2016-08-11 09:08:25,704 [main] INFO  [org.xm.segword.util.DirectoryWatcher] - 监控目录:D:\PyCredit\Blog\BlogMath\BlogCode\target\classes
+2016-08-11 09:08:25,705 [main] INFO  [org.xm.segword.util.AutoDetector] - 类路径资源：word_antonym.txt
+2016-08-11 09:08:25,705 [main] INFO  [org.xm.segword.util.AutoDetector] - 类路径资源URL：file:/D:/PyCredit/Blog/BlogMath/BlogCode/target/classes/word_antonym.txt
+2016-08-11 09:08:25,705 [main] INFO  [org.xm.segword.util.AutoDetector] - 加载资源：D:\PyCredit\Blog\BlogMath\BlogCode\target\classes\word_antonym.txt
+2016-08-11 09:08:25,707 [main] INFO  [org.xm.segword.util.AutoDetector] - 监控文件：D:\PyCredit\Blog\BlogMath\BlogCode\target\classes\word_antonym.txt
+2016-08-11 09:08:25,708 [main] INFO  [org.xm.segword.util.DirectoryWatcher] - 注册事件：ENTRY_MODIFY
+2016-08-11 09:08:25,708 [main] INFO  [org.xm.segword.util.DirectoryWatcher] - 注册事件：ENTRY_DELETE
+2016-08-11 09:08:25,708 [main] INFO  [org.xm.segword.util.DirectoryWatcher] - 监控目录:D:\PyCredit\Blog\BlogMath\BlogCode\target\classes
+2016-08-11 09:08:25,709 [main] INFO  [org.xm.segword.util.AutoDetector] - 加载资源 1091310 行
+2016-08-11 09:08:25,709 [main] INFO  [org.xm.segword.dictionary.DictionaryFactory] - 初始化词典
+2016-08-11 09:08:25,713 [main] INFO  [org.xm.segword.util.AutoDetector] - 开始加载资源
+2016-08-11 09:08:25,713 [main] INFO  [org.xm.segword.util.AutoDetector] - classpath:surname.txt
+2016-08-11 09:08:25,713 [main] INFO  [org.xm.segword.util.AutoDetector] - 类路径资源：surname.txt
+2016-08-11 09:08:25,713 [main] INFO  [org.xm.segword.util.AutoDetector] - 类路径资源URL：file:/D:/PyCredit/Blog/BlogMath/BlogCode/target/classes/surname.txt
+2016-08-11 09:08:25,714 [main] INFO  [org.xm.segword.util.AutoDetector] - 加载资源：D:\PyCredit\Blog\BlogMath\BlogCode\target\classes\surname.txt
+2016-08-11 09:08:25,715 [main] INFO  [org.xm.segword.util.AutoDetector] - 监控文件：D:\PyCredit\Blog\BlogMath\BlogCode\target\classes\surname.txt
+2016-08-11 09:08:25,715 [main] INFO  [org.xm.segword.util.DirectoryWatcher] - 注册事件：ENTRY_MODIFY
+2016-08-11 09:08:25,715 [main] INFO  [org.xm.segword.util.DirectoryWatcher] - 注册事件：ENTRY_DELETE
+2016-08-11 09:08:25,715 [main] INFO  [org.xm.segword.util.DirectoryWatcher] - 监控目录:D:\PyCredit\Blog\BlogMath\BlogCode\target\classes
+2016-08-11 09:08:25,717 [main] INFO  [org.xm.segword.util.AutoDetector] - 加载资源 508 行
+2016-08-11 09:08:25,717 [main] INFO  [org.xm.segword.recognition.PersonName] - 初始化百家姓
+2016-08-11 09:08:25,717 [main] INFO  [org.xm.segword.recognition.PersonName] - 百家姓初始化完毕，单姓个数：446，复姓个数：60
+2016-08-11 09:08:25,718 [main] INFO  [org.xm.segword.util.AutoDetector] - 完成加载资源，耗时5 毫秒
+2016-08-11 09:08:25,718 [main] INFO  [org.xm.segword.dictionary.DictionaryFactory] - 将 60 个复姓加入词典
+2016-08-11 09:08:37,915 [main] INFO  [org.xm.segword.dictionary.DictionaryFactory] - 词数目：677844，词典最大词长：16
+2016-08-11 09:08:37,916 [main] INFO  [org.xm.segword.dictionary.DictionaryFactory] - 词长  1 的词数为：47
+2016-08-11 09:08:37,916 [main] INFO  [org.xm.segword.dictionary.DictionaryFactory] - 词长  2 的词数为：213334
+2016-08-11 09:08:37,916 [main] INFO  [org.xm.segword.dictionary.DictionaryFactory] - 词长  3 的词数为：289749
+2016-08-11 09:08:37,916 [main] INFO  [org.xm.segword.dictionary.DictionaryFactory] - 词长  4 的词数为：158964
+2016-08-11 09:08:37,916 [main] INFO  [org.xm.segword.dictionary.DictionaryFactory] - 词长  5 的词数为：6139
+2016-08-11 09:08:37,916 [main] INFO  [org.xm.segword.dictionary.DictionaryFactory] - 词长  6 的词数为：3746
+2016-08-11 09:08:37,916 [main] INFO  [org.xm.segword.dictionary.DictionaryFactory] - 词长  7 的词数为：2205
+2016-08-11 09:08:37,916 [main] INFO  [org.xm.segword.dictionary.DictionaryFactory] - 词长  8 的词数为：1321
+2016-08-11 09:08:37,916 [main] INFO  [org.xm.segword.dictionary.DictionaryFactory] - 词长  9 的词数为：797
+2016-08-11 09:08:37,916 [main] INFO  [org.xm.segword.dictionary.DictionaryFactory] - 词长 10 的词数为：632
+2016-08-11 09:08:37,916 [main] INFO  [org.xm.segword.dictionary.DictionaryFactory] - 词长 11 的词数为：312
+2016-08-11 09:08:37,916 [main] INFO  [org.xm.segword.dictionary.DictionaryFactory] - 词长 12 的词数为：282
+2016-08-11 09:08:37,916 [main] INFO  [org.xm.segword.dictionary.DictionaryFactory] - 词长 13 的词数为：124
+2016-08-11 09:08:37,916 [main] INFO  [org.xm.segword.dictionary.DictionaryFactory] - 词长 14 的词数为：116
+2016-08-11 09:08:37,916 [main] INFO  [org.xm.segword.dictionary.DictionaryFactory] - 词长 15 的词数为：51
+2016-08-11 09:08:37,916 [main] INFO  [org.xm.segword.dictionary.DictionaryFactory] - 词长 16 的词数为：25
+2016-08-11 09:08:37,929 [main] INFO  [org.xm.segword.dictionary.DictionaryFactory] - 词典平均词长：3.0032012
+2016-08-11 09:08:38,081 [main] INFO  [org.xm.segword.dictionary.DictionaryFactory] - 词典初始化完毕，耗时：12372 毫秒
+2016-08-11 09:08:38,081 [main] INFO  [org.xm.segword.util.AutoDetector] - 完成加载资源，耗时13331 毫秒
+2016-08-11 09:08:38,084 [main] INFO  [org.xm.segword.util.AutoDetector] - 开始加载资源
+2016-08-11 09:08:38,084 [main] INFO  [org.xm.segword.util.AutoDetector] - classpath:punctuation.txt
+2016-08-11 09:08:38,084 [main] INFO  [org.xm.segword.util.AutoDetector] - 类路径资源：punctuation.txt
+2016-08-11 09:08:38,084 [main] INFO  [org.xm.segword.util.AutoDetector] - 类路径资源URL：file:/D:/PyCredit/Blog/BlogMath/BlogCode/target/classes/punctuation.txt
+2016-08-11 09:08:38,084 [main] INFO  [org.xm.segword.util.AutoDetector] - 加载资源：D:\PyCredit\Blog\BlogMath\BlogCode\target\classes\punctuation.txt
+2016-08-11 09:08:38,085 [main] INFO  [org.xm.segword.util.AutoDetector] - 加载资源 48 行
+2016-08-11 09:08:38,085 [main] INFO  [org.xm.segword.recognition.Punctuation] - 初始化标点符号
+2016-08-11 09:08:38,085 [main] INFO  [org.xm.segword.recognition.Punctuation] - 标点符号初始化完毕，标点符号个数：52
+2016-08-11 09:08:38,085 [main] INFO  [org.xm.segword.util.AutoDetector] - 完成加载资源，耗时1 毫秒
+2016-08-11 09:08:38,112 [ForkJoinPool.commonPool-worker-1] INFO  [org.xm.segword.util.AutoDetector] - 开始加载资源
+2016-08-11 09:08:38,112 [ForkJoinPool.commonPool-worker-1] INFO  [org.xm.segword.util.AutoDetector] - classpath:quantifier.txt
+2016-08-11 09:08:38,112 [ForkJoinPool.commonPool-worker-1] INFO  [org.xm.segword.util.AutoDetector] - 类路径资源：quantifier.txt
+2016-08-11 09:08:38,113 [ForkJoinPool.commonPool-worker-1] INFO  [org.xm.segword.util.AutoDetector] - 类路径资源URL：file:/D:/PyCredit/Blog/BlogMath/BlogCode/target/classes/quantifier.txt
+2016-08-11 09:08:38,113 [ForkJoinPool.commonPool-worker-1] INFO  [org.xm.segword.util.AutoDetector] - 加载资源：D:\PyCredit\Blog\BlogMath\BlogCode\target\classes\quantifier.txt
+2016-08-11 09:08:38,113 [ForkJoinPool.commonPool-worker-1] INFO  [org.xm.segword.util.AutoDetector] - 监控文件：D:\PyCredit\Blog\BlogMath\BlogCode\target\classes\quantifier.txt
+2016-08-11 09:08:38,113 [ForkJoinPool.commonPool-worker-1] INFO  [org.xm.segword.util.DirectoryWatcher] - 注册事件：ENTRY_MODIFY
+2016-08-11 09:08:38,113 [ForkJoinPool.commonPool-worker-1] INFO  [org.xm.segword.util.DirectoryWatcher] - 注册事件：ENTRY_DELETE
+2016-08-11 09:08:38,113 [ForkJoinPool.commonPool-worker-1] INFO  [org.xm.segword.util.DirectoryWatcher] - 监控目录:D:\PyCredit\Blog\BlogMath\BlogCode\target\classes
+2016-08-11 09:08:38,114 [ForkJoinPool.commonPool-worker-1] INFO  [org.xm.segword.util.AutoDetector] - 加载资源 164 行
+2016-08-11 09:08:38,114 [ForkJoinPool.commonPool-worker-1] INFO  [org.xm.segword.recognition.Quantifier] - 初始化数量词
+2016-08-11 09:08:38,115 [ForkJoinPool.commonPool-worker-1] INFO  [org.xm.segword.recognition.Quantifier] - 数量词初始化完毕，数量词个数：164
+2016-08-11 09:08:38,115 [ForkJoinPool.commonPool-worker-1] INFO  [org.xm.segword.util.AutoDetector] - 完成加载资源，耗时3 毫秒
+2016-08-11 09:08:38,119 [main] INFO  [org.xm.segword.util.AutoDetector] - 开始加载资源
+2016-08-11 09:08:38,119 [main] INFO  [org.xm.segword.util.AutoDetector] - classpath:bigram.txt
+2016-08-11 09:08:38,119 [main] INFO  [org.xm.segword.util.AutoDetector] - 类路径资源：bigram.txt
+2016-08-11 09:08:38,119 [main] INFO  [org.xm.segword.util.AutoDetector] - 类路径资源URL：file:/D:/PyCredit/Blog/BlogMath/BlogCode/target/classes/bigram.txt
+2016-08-11 09:08:38,120 [main] INFO  [org.xm.segword.util.AutoDetector] - 加载资源：D:\PyCredit\Blog\BlogMath\BlogCode\target\classes\bigram.txt
+2016-08-11 09:08:38,385 [main] INFO  [org.xm.segword.util.AutoDetector] - 监控文件：D:\PyCredit\Blog\BlogMath\BlogCode\target\classes\bigram.txt
+2016-08-11 09:08:38,385 [main] INFO  [org.xm.segword.util.DirectoryWatcher] - 注册事件：ENTRY_MODIFY
+2016-08-11 09:08:38,385 [main] INFO  [org.xm.segword.util.DirectoryWatcher] - 注册事件：ENTRY_DELETE
+2016-08-11 09:08:38,385 [main] INFO  [org.xm.segword.util.DirectoryWatcher] - 监控目录:D:\PyCredit\Blog\BlogMath\BlogCode\target\classes
+2016-08-11 09:08:38,393 [main] INFO  [org.xm.segword.util.AutoDetector] - 加载资源 1519443 行
+2016-08-11 09:08:38,393 [main] INFO  [org.xm.segword.corpus.Bigram] - 初始化bigram
+2016-08-11 09:09:09,453 [main] INFO  [org.xm.segword.corpus.Bigram] - bigram初始化完毕，bigram数据条数：1519443
+2016-08-11 09:09:09,454 [main] INFO  [org.xm.segword.util.AutoDetector] - 完成加载资源，耗时31335 毫秒
+2016-08-11 09:09:09,645 [main] INFO  [org.xm.segword.util.AutoDetector] - 开始加载资源
+2016-08-11 09:09:09,645 [main] INFO  [org.xm.segword.util.AutoDetector] - classpath:word_refine.txt
+2016-08-11 09:09:09,645 [main] INFO  [org.xm.segword.util.AutoDetector] - 类路径资源：word_refine.txt
+2016-08-11 09:09:09,645 [main] INFO  [org.xm.segword.util.AutoDetector] - 类路径资源URL：file:/D:/PyCredit/Blog/BlogMath/BlogCode/target/classes/word_refine.txt
+2016-08-11 09:09:09,646 [main] INFO  [org.xm.segword.util.AutoDetector] - 加载资源：D:\PyCredit\Blog\BlogMath\BlogCode\target\classes\word_refine.txt
+2016-08-11 09:09:09,646 [main] INFO  [org.xm.segword.util.AutoDetector] - 监控文件：D:\PyCredit\Blog\BlogMath\BlogCode\target\classes\word_refine.txt
+2016-08-11 09:09:09,646 [main] INFO  [org.xm.segword.util.DirectoryWatcher] - 注册事件：ENTRY_MODIFY
+2016-08-11 09:09:09,646 [main] INFO  [org.xm.segword.util.DirectoryWatcher] - 注册事件：ENTRY_DELETE
+2016-08-11 09:09:09,705 [main] INFO  [org.xm.segword.util.DirectoryWatcher] - 监控目录:D:\PyCredit\Blog\BlogMath\BlogCode\target\classes
+2016-08-11 09:09:09,751 [main] INFO  [org.xm.segword.util.AutoDetector] - 加载资源 4 行
+2016-08-11 09:09:09,751 [main] INFO  [org.xm.segword.segmentation.WordRefiner] - 初始化WordRefiner
+2016-08-11 09:09:09,752 [main] INFO  [org.xm.segword.segmentation.WordRefiner] - WordRefiner初始化完毕，数据条数：4
+2016-08-11 09:09:09,752 [main] INFO  [org.xm.segword.util.AutoDetector] - 完成加载资源，耗时107 毫秒

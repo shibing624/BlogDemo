@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modules id="123">
+    <module>这个是module标签的文本信息</module>
+    <module id="">
+        <name>oa</name>
+        <value>系统基本配置</value>
+        <descript>对系统的基本配置根目录</descript>
+        <module>这个是子module标签的文本信息</module>
+    </module>
+    <module>
+        <name>管理配置</name>
+        <value>none</value>
+        <descript>管理配置的说明</descript>
+        <module id="106">
+            <name>系统管理</name>
+            <value>0</value>
+            <descript>Config</descript>
+            <module id="107">
+                <name>部门编号</name>
+                <value>20394</value>
+                <descript>编号</descript>
+            </module>
+        </module>
+    </module>
+</modules>
