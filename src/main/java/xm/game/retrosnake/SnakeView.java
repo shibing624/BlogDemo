@@ -1,4 +1,4 @@
-package org.xm.game.retrosnake;
+package xm.game.retrosnake;
 
 import javax.swing.*;
 import java.awt.*;

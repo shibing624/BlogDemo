@@ -1,4 +1,4 @@
-package org.xm.game.retrosnake;
+package xm.game.retrosnake;
 
 /**
  * Created by xuming on 2016/6/18.

@@ -1,0 +1,16 @@
+#coding:utf-8
+from pymongo import MongoClient
+
+mc = MongoClient("localhost", 27017)
+db = mc.test
+db.test.save({"name": "lucy", "age": 21})
+c = db.test.find()
+for o in c:
+    print o
+
+db.test.save({"name": "lucys", "age": 77})
+print '$'*3
+d = db.test.find({"age":52})
+for o in d:
+    print o
+mc.close()
