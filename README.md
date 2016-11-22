@@ -28,3 +28,4 @@ environment：jdk 1.8 language level：8
 - 新增java8 steamAPI and parallel demo StreamDemo 20160824
 - 新增搜索引擎solr的示例 search 20160908
 - Huffman编码 huffman 20161116
+- 最小生成树 mst 20161121
