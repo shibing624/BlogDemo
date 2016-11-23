@@ -20,7 +20,7 @@ class CustomThread extends Thread {
             for (int i = 0; i < 3; i++) {
                 System.out.println(threadName + " loop at " + i);
                 JoinTestDemo.numlist.add(i);
-                Thread.sleep(1000);
+               // Thread.sleep(1000);
             }
             t1.join();
             System.out.println(threadName + " end.");
@@ -38,7 +38,7 @@ class CustomThread1 extends Thread {
         System.out.println(threadName + " start.");
         try {
             for (int i = 0; i < 5; i++) {
-                System.out.println(threadName + " loop at " + i);
+                System.out.println(threadName + " CustomThread1 loop at " + i);
                 Thread.sleep(1000);
                 JoinTestDemo.numlist.add(i);
             }
@@ -58,8 +58,9 @@ class JoinTestDemo {
         CustomThread t = new CustomThread(t1);
         try {
             t1.start();
-            Thread.sleep(2000);
+//            Thread.sleep(2000);
             t.start();
+
             t1.join();
             t.join(); //在代碼2里，將此處注釋掉
         } catch (Exception e) {
