@@ -29,3 +29,5 @@ environment：jdk 1.8 language level：8
 - 新增搜索引擎solr的示例 search 20160908
 - Huffman编码 huffman 20161116
 - 最小生成树 mst 20161121
+- 设计模式：观察者模式 observer 20161129
+- 智能问答系统 qa 20161130
