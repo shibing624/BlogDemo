@@ -442,3 +442,282 @@ java.lang.ClassNotFoundException: org.xm.segword.segmentation.impl.Bidirectional
 2016-08-11 09:09:09,751 [main] INFO  [org.xm.segword.segmentation.WordRefiner] - 初始化WordRefiner
 2016-08-11 09:09:09,752 [main] INFO  [org.xm.segword.segmentation.WordRefiner] - WordRefiner初始化完毕，数据条数：4
 2016-08-11 09:09:09,752 [main] INFO  [org.xm.segword.util.AutoDetector] - 完成加载资源，耗时107 毫秒
+2016-11-29 11:28:46,424 [main] ERROR [xm.sql.SQLUtil] - java.lang.ClassNotFoundException: com.mysql.jdbc.Driver
+2016-11-29 11:28:46,475 [main] ERROR [xm.sql.SQLUtil] - get mysql db connection error.java.sql.SQLException: No suitable driver found for jdbc:mysql://127.0.0.1:3306/qa
+2016-11-29 11:29:05,568 [main] ERROR [xm.sql.SQLUtil] - java.lang.ClassNotFoundException: com.mysql.jdbc.Driver
+2016-11-29 11:29:05,578 [main] ERROR [xm.sql.SQLUtil] - get mysql db connection error.java.sql.SQLException: No suitable driver found for jdbc:mysql://127.0.0.1:3306/qa
+2016-11-29 11:31:53,400 [main] ERROR [xm.sql.SQLUtil] - java.lang.ClassNotFoundException: com.mysql.jdbc.Driver
+2016-11-29 11:31:53,407 [main] ERROR [xm.sql.SQLUtil] - get mysql db connection error.java.sql.SQLException: No suitable driver found for jdbc:mysql://127.0.0.1:3306/qa
+2016-11-29 11:36:02,399 [main] ERROR [xm.sql.SQLUtil] - select error.
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'ids' in 'field list'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_91]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_91]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_91]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[na:1.8.0_91]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411) ~[mysql-connector-java-5.1.18.jar:na]
+	at com.mysql.jdbc.Util.getInstance(Util.java:386) ~[mysql-connector-java-5.1.18.jar:na]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1052) ~[mysql-connector-java-5.1.18.jar:na]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3609) ~[mysql-connector-java-5.1.18.jar:na]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3541) ~[mysql-connector-java-5.1.18.jar:na]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2002) ~[mysql-connector-java-5.1.18.jar:na]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2163) ~[mysql-connector-java-5.1.18.jar:na]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2624) ~[mysql-connector-java-5.1.18.jar:na]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:2127) ~[mysql-connector-java-5.1.18.jar:na]
+	at com.mysql.jdbc.PreparedStatement.executeQuery(PreparedStatement.java:2293) ~[mysql-connector-java-5.1.18.jar:na]
+	at xm.sql.SQLUtil.getRewindEvidence(SQLUtil.java:78) [classes/:na]
+	at xm.sql.SQLUtil.main(SQLUtil.java:93) [classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_91]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_91]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_91]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_91]
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:147) [idea_rt.jar:na]
+2016-11-29 13:43:07,716 [main] INFO  [xm.sql.SQLUtil] - 保存回带文本成功
+2016-11-29 13:44:11,620 [main] INFO  [xm.sql.SQLUtil] - 保存回带文本成功
+2016-11-29 13:51:45,574 [main] INFO  [xm.sql.SQLUtil] - 保存回带文本成功
+2016-11-29 16:34:02,886 [main] INFO  [xm.qa.sql.SQLUtil] - 没有从数据库中查询到问题：baidu的创始人是哪个
+2016-11-29 16:34:04,378 [main] ERROR [xm.qa.BaiduDataSource] - not found search result,page:1
+2016-11-29 16:34:04,378 [main] INFO  [xm.qa.BaiduDataSource] - question:baidu的创始人是哪个 search evidence, size: 0.
+2016-11-29 16:34:37,125 [main] INFO  [xm.qa.sql.SQLUtil] - 没有从数据库中查询到问题：baidu的创始人是谁
+2016-11-29 16:34:37,979 [main] ERROR [xm.qa.BaiduDataSource] - not found search result,page:1
+2016-11-29 16:34:37,981 [main] INFO  [xm.qa.BaiduDataSource] - question:baidu的创始人是谁 search evidence, size: 0.
+2016-11-29 16:36:53,542 [main] INFO  [xm.qa.sql.SQLUtil] - 没有从数据库中查询到问题：baidu的创始人是谁
+2016-11-29 16:38:06,040 [main] ERROR [xm.qa.BaiduDataSource] - not found search result,page:1
+2016-11-29 16:38:06,043 [main] INFO  [xm.qa.BaiduDataSource] - question:baidu的创始人是谁 search evidence, size: 0.
+2016-11-29 16:38:09,316 [main] INFO  [xm.qa.sql.SQLUtil] - 没有从数据库中查询到问题：baidu的创始人是谁
+2016-11-29 16:46:47,856 [main] ERROR [xm.qa.BaiduDataSource] - not found search result,page:1
+2016-11-29 16:46:47,856 [main] INFO  [xm.qa.BaiduDataSource] - question:baidu的创始人是谁 search evidence, size: 0.
+2016-11-29 16:47:23,024 [main] INFO  [xm.qa.sql.SQLUtil] - 没有从数据库中查询到问题：baidu的创始人是谁
+2016-11-29 16:47:23,613 [main] ERROR [xm.qa.BaiduDataSource] - not found search result,page:1
+2016-11-29 16:47:23,614 [main] INFO  [xm.qa.BaiduDataSource] - question:baidu的创始人是谁 search evidence, size: 0.
+2016-11-29 16:49:10,860 [main] INFO  [xm.qa.sql.SQLUtil] - 没有从数据库中查询到问题：baidu的创始人是谁
+2016-11-29 16:49:11,342 [main] INFO  [xm.qa.BaiduDataSource] - question:baidu的创始人是谁 search evidence, size: 9.
+2016-11-29 16:49:11,668 [main] INFO  [xm.qa.sql.SQLUtil] - 保存问题成功
+2016-11-29 16:49:11,777 [main] INFO  [xm.qa.sql.SQLUtil] - 保存证据 1 成功
+2016-11-29 16:49:11,894 [main] INFO  [xm.qa.sql.SQLUtil] - 保存证据 2 成功
+2016-11-29 16:49:12,059 [main] INFO  [xm.qa.sql.SQLUtil] - 保存证据 3 成功
+2016-11-29 16:49:12,201 [main] INFO  [xm.qa.sql.SQLUtil] - 保存证据 4 成功
+2016-11-29 16:49:12,242 [main] INFO  [xm.qa.sql.SQLUtil] - 保存证据 5 成功
+2016-11-29 16:49:12,356 [main] INFO  [xm.qa.sql.SQLUtil] - 保存证据 6 成功
+2016-11-29 16:49:12,412 [main] INFO  [xm.qa.sql.SQLUtil] - 保存证据 7 成功
+2016-11-29 16:49:12,469 [main] INFO  [xm.qa.sql.SQLUtil] - 保存证据 8 成功
+2016-11-29 16:49:12,517 [main] INFO  [xm.qa.sql.SQLUtil] - 保存证据 9 成功
+2016-11-29 16:51:10,611 [main] INFO  [xm.qa.sql.SQLUtil] - 没有从数据库中查询到问题：baidu的有多少钱
+2016-11-29 16:51:11,671 [main] INFO  [xm.qa.BaiduDataSource] - question:baidu的有多少钱 search evidence, size: 8.
+2016-11-29 16:51:11,985 [main] INFO  [xm.qa.sql.SQLUtil] - 保存问题成功
+2016-11-29 16:51:12,026 [main] INFO  [xm.qa.sql.SQLUtil] - 保存证据 1 成功
+2016-11-29 16:51:12,116 [main] INFO  [xm.qa.sql.SQLUtil] - 保存证据 2 成功
+2016-11-29 16:51:12,143 [main] INFO  [xm.qa.sql.SQLUtil] - 保存证据 3 成功
+2016-11-29 16:51:12,218 [main] INFO  [xm.qa.sql.SQLUtil] - 保存证据 4 成功
+2016-11-29 16:51:12,251 [main] INFO  [xm.qa.sql.SQLUtil] - 保存证据 5 成功
+2016-11-29 16:51:12,276 [main] INFO  [xm.qa.sql.SQLUtil] - 保存证据 6 成功
+2016-11-29 16:51:12,304 [main] INFO  [xm.qa.sql.SQLUtil] - 保存证据 7 成功
+2016-11-29 16:51:12,326 [main] INFO  [xm.qa.sql.SQLUtil] - 保存证据 8 成功
+2016-11-29 16:52:04,752 [main] INFO  [xm.qa.sql.SQLUtil] - 没有从数据库中查询到问题：baidu的市值有多少钱
+2016-11-29 16:52:05,634 [main] INFO  [xm.qa.BaiduDataSource] - question:baidu的市值有多少钱 search evidence, size: 10.
+2016-11-29 16:52:05,734 [main] INFO  [xm.qa.sql.SQLUtil] - 保存问题成功
+2016-11-29 16:52:05,854 [main] INFO  [xm.qa.sql.SQLUtil] - 保存证据 1 成功
+2016-11-29 16:52:06,161 [main] INFO  [xm.qa.sql.SQLUtil] - 保存证据 2 成功
+2016-11-29 16:52:06,195 [main] INFO  [xm.qa.sql.SQLUtil] - 保存证据 3 成功
+2016-11-29 16:52:06,284 [main] INFO  [xm.qa.sql.SQLUtil] - 保存证据 4 成功
+2016-11-29 16:52:06,361 [main] INFO  [xm.qa.sql.SQLUtil] - 保存证据 5 成功
+2016-11-29 16:52:06,397 [main] INFO  [xm.qa.sql.SQLUtil] - 保存证据 6 成功
+2016-11-29 16:52:06,422 [main] INFO  [xm.qa.sql.SQLUtil] - 保存证据 7 成功
+2016-11-29 16:52:06,445 [main] INFO  [xm.qa.sql.SQLUtil] - 保存证据 8 成功
+2016-11-29 16:52:06,470 [main] INFO  [xm.qa.sql.SQLUtil] - 保存证据 9 成功
+2016-11-29 16:52:06,495 [main] INFO  [xm.qa.sql.SQLUtil] - 保存证据 10 成功
+2016-11-29 16:53:52,758 [main] INFO  [xm.qa.BaiduDataSource] - select question from db:baidu的市值有多少钱
+2016-11-29 16:55:10,295 [main] INFO  [xm.qa.sql.SQLUtil] - 没有从数据库中查询到问题：江阴
+2016-11-29 16:55:10,842 [main] INFO  [xm.qa.BaiduDataSource] - question:江阴 search evidence, size: 5.
+2016-11-29 17:17:06,919 [main] INFO  [xm.qa.sql.SQLUtil] - 没有从数据库中查询到问题：安陆
+2016-11-29 17:18:04,319 [main] ERROR [xm.qa.BaiduDataSource] - not found search result,page:1
+2016-11-29 17:18:06,069 [main] INFO  [xm.qa.BaiduDataSource] - question:安陆 search evidence, size: 0.
+2016-11-29 17:18:38,406 [main] INFO  [xm.qa.sql.SQLUtil] - 没有从数据库中查询到问题：安陆
+2016-11-29 17:24:27,193 [main] ERROR [xm.qa.BaiduDataSource] - not found search result,page:1
+2016-11-29 17:24:27,193 [main] INFO  [xm.qa.BaiduDataSource] - question:安陆 search evidence, size: 0.
+2016-11-29 17:24:37,041 [main] INFO  [xm.qa.sql.SQLUtil] - 没有从数据库中查询到问题：安陆
+2016-11-29 17:26:22,334 [main] ERROR [xm.qa.BaiduDataSource] - not found search result,page:1
+2016-11-29 17:26:22,334 [main] INFO  [xm.qa.BaiduDataSource] - question:安陆 search evidence, size: 0.
+2016-11-29 17:26:26,863 [main] INFO  [xm.qa.sql.SQLUtil] - 没有从数据库中查询到问题：安陆
+2016-11-29 17:27:31,260 [main] ERROR [xm.qa.BaiduDataSource] - not found search result,page:1
+2016-11-29 17:27:31,260 [main] INFO  [xm.qa.BaiduDataSource] - question:安陆 search evidence, size: 0.
+2016-11-29 17:27:36,561 [main] INFO  [xm.qa.sql.SQLUtil] - 没有从数据库中查询到问题：安陆
+2016-11-29 17:28:09,746 [main] ERROR [xm.qa.BaiduDataSource] - not found search result,page:1
+2016-11-29 17:28:51,042 [main] INFO  [xm.qa.BaiduDataSource] - question:安陆 search evidence, size: 0.
+2016-11-29 17:28:55,789 [main] INFO  [xm.qa.sql.SQLUtil] - 没有从数据库中查询到问题：安陆
+2016-11-29 17:29:40,157 [main] ERROR [xm.qa.BaiduDataSource] - not found search result,page:1
+2016-11-29 17:29:40,158 [main] INFO  [xm.qa.BaiduDataSource] - question:安陆 search evidence, size: 0.
+2016-11-29 17:29:46,394 [main] INFO  [xm.qa.sql.SQLUtil] - 没有从数据库中查询到问题：安陆
+2016-11-29 17:34:09,157 [main] ERROR [xm.qa.BaiduDataSource] - not found search result,page:1
+2016-11-29 17:34:09,157 [main] INFO  [xm.qa.BaiduDataSource] - question:安陆 search evidence, size: 0.
+2016-11-29 17:34:20,441 [main] INFO  [xm.qa.sql.SQLUtil] - 没有从数据库中查询到问题：安陆
+2016-11-29 17:47:59,675 [main] ERROR [xm.qa.BaiduDataSource] - not found search result,page:1
+2016-11-29 17:47:59,676 [main] INFO  [xm.qa.BaiduDataSource] - question:安陆 search evidence, size: 0.
+2016-11-29 17:48:06,238 [main] INFO  [xm.qa.sql.SQLUtil] - 没有从数据库中查询到问题：安陆
+2016-11-29 17:52:24,275 [main] ERROR [xm.qa.BaiduDataSource] - not found search result,page:1
+2016-11-29 17:52:24,275 [main] INFO  [xm.qa.BaiduDataSource] - question:安陆 search evidence, size: 0.
+2016-11-29 17:52:28,948 [main] INFO  [xm.qa.sql.SQLUtil] - 没有从数据库中查询到问题：安陆
+2016-11-29 18:01:28,462 [main] ERROR [xm.qa.BaiduDataSource] - search error.
+org.jsoup.select.Selector$SelectorParseException: Could not parse query 'class="title-text"': unexpected token at '="title-text"'
+	at org.jsoup.select.QueryParser.findElements(QueryParser.java:195) ~[jsoup-1.7.2.jar:na]
+	at org.jsoup.select.QueryParser.parse(QueryParser.java:64) ~[jsoup-1.7.2.jar:na]
+	at org.jsoup.select.QueryParser.parse(QueryParser.java:38) ~[jsoup-1.7.2.jar:na]
+	at org.jsoup.select.QueryParser.combinator(QueryParser.java:80) ~[jsoup-1.7.2.jar:na]
+	at org.jsoup.select.QueryParser.parse(QueryParser.java:62) ~[jsoup-1.7.2.jar:na]
+	at org.jsoup.select.QueryParser.parse(QueryParser.java:38) ~[jsoup-1.7.2.jar:na]
+	at org.jsoup.select.Selector.<init>(Selector.java:80) ~[jsoup-1.7.2.jar:na]
+	at org.jsoup.select.Selector.select(Selector.java:93) ~[jsoup-1.7.2.jar:na]
+	at org.jsoup.nodes.Element.select(Element.java:252) ~[jsoup-1.7.2.jar:na]
+	at xm.qa.place.BaikeDataSource.searchBaike(BaikeDataSource.java:122) [classes/:na]
+	at xm.qa.place.BaikeDataSource.getAnswerByQuestion(BaikeDataSource.java:83) [classes/:na]
+	at xm.qa.place.BaikeDataSource.getQuestion(BaikeDataSource.java:58) [classes/:na]
+	at xm.qa.place.BaikeDataSource.main(BaikeDataSource.java:147) [classes/:na]
+2016-11-29 18:01:28,462 [main] ERROR [xm.qa.BaiduDataSource] - not found search result,page:1
+2016-11-29 18:01:28,462 [main] INFO  [xm.qa.BaiduDataSource] - question:安陆 search evidence, size: 0.
+2016-11-29 18:01:34,567 [main] INFO  [xm.qa.sql.SQLUtil] - 没有从数据库中查询到问题：安陆
+2016-11-29 18:02:29,024 [main] ERROR [xm.qa.BaiduDataSource] - not found search result,page:1
+2016-11-29 18:02:29,024 [main] INFO  [xm.qa.BaiduDataSource] - question:安陆 search evidence, size: 0.
+2016-11-29 18:03:31,063 [main] INFO  [xm.qa.sql.SQLUtil] - 没有从数据库中查询到问题：安陆
+2016-11-29 18:04:36,817 [main] ERROR [xm.qa.BaiduDataSource] - not found search result,page:1
+2016-11-29 18:04:36,817 [main] INFO  [xm.qa.BaiduDataSource] - question:安陆 search evidence, size: 0.
+2016-11-29 18:04:50,433 [main] INFO  [xm.qa.sql.SQLUtil] - 没有从数据库中查询到问题：安陆
+2016-11-29 18:06:04,600 [main] ERROR [xm.qa.BaiduDataSource] - not found search result,page:1
+2016-11-29 18:06:04,600 [main] INFO  [xm.qa.BaiduDataSource] - question:安陆 search evidence, size: 0.
+2016-11-29 18:06:09,307 [main] INFO  [xm.qa.sql.SQLUtil] - 没有从数据库中查询到问题：安陆
+2016-11-29 18:06:26,140 [main] INFO  [xm.qa.BaiduDataSource] - title is 行政区划
+2016-11-29 18:07:16,781 [main] INFO  [xm.qa.BaiduDataSource] - question:安陆 search evidence, size: 1.
+2016-11-29 18:09:09,520 [main] INFO  [xm.qa.sql.SQLUtil] - 没有从数据库中查询到问题：安陆
+2016-11-29 18:10:04,494 [main] INFO  [xm.qa.BaiduDataSource] - title is 行政区划
+2016-11-29 18:10:04,498 [main] INFO  [xm.qa.BaiduDataSource] - question:安陆 search evidence, size: 1.
+2016-11-29 18:11:12,535 [main] INFO  [xm.qa.sql.SQLUtil] - 没有从数据库中查询到问题：江阴是在哪个省
+2016-11-29 18:11:13,487 [main] INFO  [xm.qa.BaiduDataSource] - question:江阴是在哪个省 search evidence, size: 9.
+2016-11-29 18:11:13,984 [main] INFO  [xm.qa.sql.SQLUtil] - 保存问题成功
+2016-11-30 08:58:15,120 [main] INFO  [xm.qa.sql.SQLUtil] - 没有从数据库中查询到问题：孝感
+2016-11-30 08:58:19,023 [main] INFO  [xm.qa.BaiduDataSource] - title is 行政区划
+2016-11-30 08:58:19,023 [main] INFO  [xm.qa.BaiduDataSource] - title is 行政区划
+2016-11-30 08:58:19,023 [main] INFO  [xm.qa.BaiduDataSource] - title is 行政区划
+2016-11-30 08:58:19,023 [main] INFO  [xm.qa.BaiduDataSource] - title is 行政区划
+2016-11-30 08:58:19,023 [main] INFO  [xm.qa.BaiduDataSource] - title is 行政区划
+2016-11-30 08:58:19,023 [main] INFO  [xm.qa.BaiduDataSource] - title is 行政区划
+2016-11-30 08:58:19,023 [main] INFO  [xm.qa.BaiduDataSource] - title is 行政区划
+2016-11-30 08:58:19,023 [main] INFO  [xm.qa.BaiduDataSource] - title is 行政区划
+2016-11-30 08:58:19,023 [main] INFO  [xm.qa.BaiduDataSource] - title is 行政区划
+2016-11-30 08:58:19,023 [main] INFO  [xm.qa.BaiduDataSource] - title is 行政区划
+2016-11-30 08:58:19,024 [main] INFO  [xm.qa.BaiduDataSource] - title is 行政区划
+2016-11-30 08:58:19,024 [main] INFO  [xm.qa.BaiduDataSource] - title is 行政区划
+2016-11-30 08:58:19,024 [main] INFO  [xm.qa.BaiduDataSource] - title is 行政区划
+2016-11-30 08:58:19,024 [main] INFO  [xm.qa.BaiduDataSource] - title is 行政区划
+2016-11-30 08:58:19,024 [main] INFO  [xm.qa.BaiduDataSource] - title is 行政区划
+2016-11-30 08:58:19,024 [main] ERROR [xm.qa.BaiduDataSource] - not found search result,page:1
+2016-11-30 08:58:19,024 [main] INFO  [xm.qa.BaiduDataSource] - question:孝感 search evidence, size: 0.
+2016-11-30 09:01:10,324 [main] INFO  [xm.qa.sql.SQLUtil] - 没有从数据库中查询到问题：孝感
+2016-11-30 09:01:13,805 [main] INFO  [xm.qa.BaiduDataSource] - title is 行政区划
+2016-11-30 09:01:28,105 [main] INFO  [xm.qa.BaiduDataSource] - question:孝感 search evidence, size: 1.
+2016-11-30 09:01:28,177 [main] INFO  [xm.qa.sql.SQLUtil] - 没有从数据库中查询到问题：
+2016-11-30 09:01:28,382 [main] ERROR [xm.qa.BaiduDataSource] - not found search result,page:1
+2016-11-30 09:01:28,382 [main] INFO  [xm.qa.BaiduDataSource] - question: search evidence, size: 0.
+2016-11-30 09:01:28,445 [main] INFO  [xm.qa.sql.SQLUtil] - 没有从数据库中查询到问题：江阴
+2016-11-30 09:01:28,872 [main] INFO  [xm.qa.BaiduDataSource] - title is 行政区划
+2016-11-30 09:01:28,872 [main] INFO  [xm.qa.BaiduDataSource] - question:江阴 search evidence, size: 1.
+2016-11-30 09:01:29,006 [main] INFO  [xm.qa.sql.SQLUtil] - 没有从数据库中查询到问题：博爱
+2016-11-30 09:01:29,296 [main] INFO  [xm.qa.BaiduDataSource] - title is 行政区划
+2016-11-30 09:01:29,297 [main] INFO  [xm.qa.BaiduDataSource] - question:博爱 search evidence, size: 1.
+2016-11-30 09:01:29,351 [main] INFO  [xm.qa.sql.SQLUtil] - 没有从数据库中查询到问题：焦作
+2016-11-30 09:01:36,491 [main] INFO  [xm.qa.sql.SQLUtil] - 没有从数据库中查询到问题：孝感
+2016-11-30 09:01:39,717 [main] ERROR [xm.qa.BaiduDataSource] - not found search result,page:1
+2016-11-30 09:01:39,718 [main] INFO  [xm.qa.BaiduDataSource] - question:孝感 search evidence, size: 0.
+2016-11-30 09:01:39,773 [main] INFO  [xm.qa.sql.SQLUtil] - 没有从数据库中查询到问题：
+2016-11-30 09:01:44,220 [main] ERROR [xm.qa.BaiduDataSource] - not found search result,page:1
+2016-11-30 09:01:44,220 [main] INFO  [xm.qa.BaiduDataSource] - question: search evidence, size: 0.
+2016-11-30 09:01:44,247 [main] INFO  [xm.qa.sql.SQLUtil] - 没有从数据库中查询到问题：江阴
+2016-11-30 09:01:50,234 [main] INFO  [xm.qa.BaiduDataSource] - title is 行政区划
+2016-11-30 09:02:18,651 [main] INFO  [xm.qa.BaiduDataSource] - question:江阴 search evidence, size: 1.
+2016-11-30 09:02:26,420 [main] INFO  [xm.qa.sql.SQLUtil] - 没有从数据库中查询到问题：博爱
+2016-11-30 09:02:57,158 [main] INFO  [xm.qa.BaiduDataSource] - title is 行政区划
+2016-11-30 09:02:59,710 [main] INFO  [xm.qa.BaiduDataSource] - question:博爱 search evidence, size: 1.
+2016-11-30 09:02:59,739 [main] INFO  [xm.qa.sql.SQLUtil] - 没有从数据库中查询到问题：焦作
+2016-11-30 09:03:00,130 [main] INFO  [xm.qa.BaiduDataSource] - title is 行政区划
+2016-11-30 09:03:00,130 [main] INFO  [xm.qa.BaiduDataSource] - question:焦作 search evidence, size: 1.
+2016-11-30 09:03:00,153 [main] INFO  [xm.qa.sql.SQLUtil] - 没有从数据库中查询到问题：黄石
+2016-11-30 09:03:00,404 [main] INFO  [xm.qa.BaiduDataSource] - title is 行政区划
+2016-11-30 09:03:00,405 [main] INFO  [xm.qa.BaiduDataSource] - question:黄石 search evidence, size: 1.
+2016-11-30 09:03:00,428 [main] INFO  [xm.qa.sql.SQLUtil] - 没有从数据库中查询到问题：安陆
+2016-11-30 09:03:00,567 [main] INFO  [xm.qa.BaiduDataSource] - title is 行政区划
+2016-11-30 09:03:00,567 [main] INFO  [xm.qa.BaiduDataSource] - question:安陆 search evidence, size: 1.
+2016-11-30 09:03:00,604 [main] INFO  [xm.qa.sql.SQLUtil] - 没有从数据库中查询到问题：随州
+2016-11-30 09:03:00,739 [main] INFO  [xm.qa.BaiduDataSource] - title is 行政区划
+2016-11-30 09:03:00,739 [main] INFO  [xm.qa.BaiduDataSource] - question:随州 search evidence, size: 1.
+2016-11-30 09:04:14,580 [main] INFO  [xm.qa.sql.SQLUtil] - 没有从数据库中查询到问题：孝感
+2016-11-30 09:04:26,073 [main] ERROR [xm.qa.BaiduDataSource] - not found search result,page:1
+2016-11-30 09:04:26,073 [main] INFO  [xm.qa.BaiduDataSource] - question:孝感 search evidence, size: 0.
+2016-11-30 09:04:26,122 [main] INFO  [xm.qa.sql.SQLUtil] - 没有从数据库中查询到问题：
+2016-11-30 09:04:27,827 [main] ERROR [xm.qa.BaiduDataSource] - not found search result,page:1
+2016-11-30 09:04:27,827 [main] INFO  [xm.qa.BaiduDataSource] - question: search evidence, size: 0.
+2016-11-30 09:04:27,850 [main] INFO  [xm.qa.sql.SQLUtil] - 没有从数据库中查询到问题：江阴
+2016-11-30 09:04:28,279 [main] INFO  [xm.qa.BaiduDataSource] - title is 江阴行政区划
+2016-11-30 09:04:36,469 [main] INFO  [xm.qa.BaiduDataSource] - question:江阴 search evidence, size: 1.
+2016-11-30 09:04:36,737 [main] INFO  [xm.qa.sql.SQLUtil] - 保存问题成功
+2016-11-30 09:04:36,818 [main] INFO  [xm.qa.sql.SQLUtil] - 没有从数据库中查询到问题：博爱
+2016-11-30 09:04:37,352 [main] INFO  [xm.qa.BaiduDataSource] - title is 博爱县行政区划
+2016-11-30 09:04:40,520 [main] INFO  [xm.qa.BaiduDataSource] - question:博爱 search evidence, size: 1.
+2016-11-30 09:04:40,644 [main] INFO  [xm.qa.sql.SQLUtil] - 保存问题成功
+2016-11-30 09:04:40,776 [main] INFO  [xm.qa.sql.SQLUtil] - 没有从数据库中查询到问题：焦作
+2016-11-30 09:04:41,417 [main] INFO  [xm.qa.BaiduDataSource] - title is 焦作行政区划
+2016-11-30 09:04:43,451 [main] INFO  [xm.qa.BaiduDataSource] - question:焦作 search evidence, size: 1.
+2016-11-30 09:04:43,516 [main] INFO  [xm.qa.sql.SQLUtil] - 保存问题成功
+2016-11-30 09:04:43,575 [main] INFO  [xm.qa.sql.SQLUtil] - 没有从数据库中查询到问题：黄石
+2016-11-30 09:04:44,086 [main] INFO  [xm.qa.BaiduDataSource] - title is 黄石行政区划
+2016-11-30 09:04:47,026 [main] INFO  [xm.qa.BaiduDataSource] - question:黄石 search evidence, size: 1.
+2016-11-30 09:04:47,086 [main] INFO  [xm.qa.sql.SQLUtil] - 保存问题成功
+2016-11-30 09:04:47,127 [main] INFO  [xm.qa.sql.SQLUtil] - 没有从数据库中查询到问题：安陆
+2016-11-30 09:04:47,290 [main] INFO  [xm.qa.BaiduDataSource] - title is 安陆行政区划
+2016-11-30 09:04:55,745 [main] INFO  [xm.qa.BaiduDataSource] - question:安陆 search evidence, size: 1.
+2016-11-30 09:04:55,817 [main] INFO  [xm.qa.sql.SQLUtil] - 保存问题成功
+2016-11-30 09:04:55,880 [main] INFO  [xm.qa.sql.SQLUtil] - 没有从数据库中查询到问题：随州
+2016-11-30 09:04:56,265 [main] INFO  [xm.qa.BaiduDataSource] - title is 随州行政区划
+2016-11-30 09:04:58,158 [main] INFO  [xm.qa.BaiduDataSource] - question:随州 search evidence, size: 1.
+2016-11-30 09:04:58,219 [main] INFO  [xm.qa.sql.SQLUtil] - 保存问题成功
+2016-11-30 09:06:51,649 [main] INFO  [xm.qa.sql.SQLUtil] - 没有从数据库中查询到问题：孝感
+2016-11-30 09:06:52,337 [main] ERROR [xm.qa.BaiduDataSource] - not found search result,page:1
+2016-11-30 09:06:52,338 [main] INFO  [xm.qa.BaiduDataSource] - question:孝感 search evidence, size: 0.
+2016-11-30 09:06:52,382 [main] INFO  [xm.qa.sql.SQLUtil] - 没有从数据库中查询到问题：
+2016-11-30 09:06:52,533 [main] ERROR [xm.qa.BaiduDataSource] - not found search result,page:1
+2016-11-30 09:06:52,534 [main] INFO  [xm.qa.BaiduDataSource] - question: search evidence, size: 0.
+2016-11-30 09:06:52,643 [main] INFO  [xm.qa.BaiduDataSource] - select question from db:江阴
+2016-11-30 09:06:52,670 [main] INFO  [xm.qa.BaiduDataSource] - select question from db:博爱
+2016-11-30 09:06:52,703 [main] INFO  [xm.qa.BaiduDataSource] - select question from db:焦作
+2016-11-30 09:06:52,778 [main] INFO  [xm.qa.BaiduDataSource] - select question from db:黄石
+2016-11-30 09:06:52,833 [main] INFO  [xm.qa.BaiduDataSource] - select question from db:安陆
+2016-11-30 09:06:52,867 [main] INFO  [xm.qa.BaiduDataSource] - select question from db:随州
+2016-11-30 09:10:14,573 [main] INFO  [xm.qa.sql.SQLUtil] - 没有从数据库中查询到问题：孝感
+2016-11-30 09:10:15,768 [main] INFO  [xm.qa.BaiduDataSource] - title is 孝感区划
+2016-11-30 09:10:15,769 [main] INFO  [xm.qa.BaiduDataSource] - question:孝感 search evidence, size: 1.
+2016-11-30 09:10:15,834 [main] INFO  [xm.qa.sql.SQLUtil] - 保存问题成功
+2016-11-30 09:10:15,955 [main] INFO  [xm.qa.sql.SQLUtil] - 没有从数据库中查询到问题：应城
+2016-11-30 09:10:16,181 [main] INFO  [xm.qa.BaiduDataSource] - title is 应城行政区划
+2016-11-30 09:10:16,182 [main] INFO  [xm.qa.BaiduDataSource] - question:应城 search evidence, size: 1.
+2016-11-30 09:10:16,257 [main] INFO  [xm.qa.sql.SQLUtil] - 保存问题成功
+2016-11-30 09:10:16,678 [main] INFO  [xm.qa.BaiduDataSource] - select question from db:江阴
+2016-11-30 09:10:16,705 [main] INFO  [xm.qa.BaiduDataSource] - select question from db:博爱
+2016-11-30 09:10:16,730 [main] INFO  [xm.qa.BaiduDataSource] - select question from db:焦作
+2016-11-30 09:10:16,747 [main] INFO  [xm.qa.BaiduDataSource] - select question from db:黄石
+2016-11-30 09:10:16,766 [main] INFO  [xm.qa.BaiduDataSource] - select question from db:安陆
+2016-11-30 09:10:16,788 [main] INFO  [xm.qa.BaiduDataSource] - select question from db:随州
+2016-11-30 09:11:46,274 [main] INFO  [xm.qa.BaiduDataSource] - select question from db:孝感
+2016-11-30 09:11:46,347 [main] INFO  [xm.qa.BaiduDataSource] - select question from db:应城
+2016-11-30 09:11:46,361 [main] INFO  [xm.qa.BaiduDataSource] - select question from db:江阴
+2016-11-30 09:11:46,409 [main] INFO  [xm.qa.BaiduDataSource] - select question from db:博爱
+2016-11-30 09:11:46,432 [main] INFO  [xm.qa.BaiduDataSource] - select question from db:焦作
+2016-11-30 09:11:46,467 [main] INFO  [xm.qa.BaiduDataSource] - select question from db:黄石
+2016-11-30 09:11:46,511 [main] INFO  [xm.qa.BaiduDataSource] - select question from db:安陆
+2016-11-30 09:11:46,559 [main] INFO  [xm.qa.BaiduDataSource] - select question from db:随州
+2016-11-30 09:11:46,571 [main] INFO  [xm.qa.sql.SQLUtil] - 没有从数据库中查询到问题：白玉
+2016-11-30 09:11:47,416 [main] ERROR [xm.qa.BaiduDataSource] - not found search result,page:1
+2016-11-30 09:11:47,416 [main] INFO  [xm.qa.BaiduDataSource] - question:白玉 search evidence, size: 0.
+2016-11-30 09:11:47,433 [main] INFO  [xm.qa.sql.SQLUtil] - 没有从数据库中查询到问题：凤凰
+2016-11-30 09:11:48,030 [main] INFO  [xm.qa.BaiduDataSource] - title is 凤凰古城地理环境
+2016-11-30 09:11:48,037 [main] INFO  [xm.qa.BaiduDataSource] - question:凤凰 search evidence, size: 1.
+2016-11-30 09:11:48,181 [main] INFO  [xm.qa.sql.SQLUtil] - 保存问题成功
+2016-11-30 09:11:48,310 [main] INFO  [xm.qa.sql.SQLUtil] - 没有从数据库中查询到问题：罗湖
+2016-11-30 09:11:48,584 [main] INFO  [xm.qa.BaiduDataSource] - title is 罗湖区行政区划
+2016-11-30 09:11:48,584 [main] INFO  [xm.qa.BaiduDataSource] - question:罗湖 search evidence, size: 1.
+2016-11-30 09:11:48,661 [main] INFO  [xm.qa.sql.SQLUtil] - 保存问题成功

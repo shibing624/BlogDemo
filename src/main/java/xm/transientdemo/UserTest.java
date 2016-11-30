@@ -1,4 +1,4 @@
-package xm.demo.transientdemo;
+package xm.transientdemo;
 
 
 import java.io.*;
