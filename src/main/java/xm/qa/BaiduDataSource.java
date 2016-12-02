@@ -54,10 +54,10 @@ public class BaiduDataSource implements DataSource {
 
     @Override
     public Question getAnswerByQuestion(String questionStr) {
-        // 1.select local db
+        // 1.select local nosql
         Question question = SQLUtil.getQuestionFromDatabase("baidu:", questionStr);
         if (question != null) {
-            LOG.info("select question from db:" + question.getQuestion());
+            LOG.info("select question from nosql:" + question.getQuestion());
             return question;
         }
         // 2.search baidu
@@ -86,7 +86,7 @@ public class BaiduDataSource implements DataSource {
         if (question.getEvidences().isEmpty()) {
             return null;
         }
-        // 3.save search result to db
+        // 3.save search result to nosql
         if (question.getEvidences().size() > 7) {
             SQLUtil.saveQuestionToDatabase("baidu:", question);
         }

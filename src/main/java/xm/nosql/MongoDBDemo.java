@@ -1,4 +1,4 @@
-package xm.db;
+package xm.nosql;
 
 import com.mongodb.MongoClient;
 import com.mongodb.client.FindIterable;

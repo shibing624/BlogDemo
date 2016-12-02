@@ -32,7 +32,7 @@ public class SQLUtil {
         try{
             conn = DriverManager.getConnection(URL,USER,PASSWORD);
         }catch (SQLException e){
-            LOG.error("get mysql db connection error."+e);
+            LOG.error("get mysql nosql connection error."+e);
         }
         return conn;
     }
@@ -63,7 +63,7 @@ public class SQLUtil {
                 conn.close();
             }
         }catch (SQLException e){
-            LOG.error("close db error.",e);
+            LOG.error("close nosql error.",e);
         }
     }
 

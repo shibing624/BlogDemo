@@ -1,4 +1,4 @@
-package xm.db;
+package xm.nosql;
 
 public class Main {
 
