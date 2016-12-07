@@ -12,10 +12,9 @@ import xm.qa.Evidence;
 import xm.qa.Question;
 import xm.qa.sql.SQLUtil;
 
-import java.io.UnsupportedEncodingException;
+import java.io.*;
 import java.net.URLEncoder;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 /**
  * 百度百科
@@ -146,17 +145,35 @@ public class BaikeDataSource implements DataSource {
     }
 
     public static void main(String[] args) {
-        String[] places = {"孝感", "应城", "江阴", "博爱", "焦作", "黄石", "安陆", "随州","白玉", "凤凰", "罗湖"};
-        for (String place : places) {
-            Question question = new BaikeDataSource().getQuestion(place);
-            if (question != null) {
-                System.out.println(question.toString());
-            }else{
-                System.out.println("非地名："+place);
+        Map map = new HashMap<String, String>();
+
+        try {
+            File f = new File("data/only_area.txt");
+            PrintStream ps = new PrintStream(new BufferedOutputStream(new FileOutputStream("data/only_area_validate.txt")));
+            BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(f), "utf-8"));
+            String readline;
+            while ((readline = br.readLine()) != null) {
+                map.put(readline.trim(), "");
             }
+            br.close();
 
+            Iterator iter = map.entrySet().iterator();
+            while (iter.hasNext()) {
+                Map.Entry entry = (Map.Entry) iter.next();
+                String place = (String) entry.getKey();
+                Question question = new BaikeDataSource().getQuestion(place);
+                if (question != null) {
+                    entry.setValue("Y");
+
+                } else {
+                    entry.setValue("N");
+                }
+                ps.println((String) (entry.getKey())+"\t"+(String) (entry.getValue()));
+            }
+            ps.close();
+        } catch (Exception e) {
+            e.printStackTrace();
         }
-
 
     }
 }

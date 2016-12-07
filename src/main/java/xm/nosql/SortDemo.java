@@ -16,7 +16,6 @@ public class SortDemo {
     public static void main(String[] args) {
         Jedis jedis;
         jedis = new Jedis("127.0.0.1", 6379);
-        jedis.flushDB();
         //jedis 排序
         //注意，此处的rpush和lpush是List的操作。是一个双向链表（但从表现来看的）
         jedis.del("b");//先清除数据，再加入数据进行测试

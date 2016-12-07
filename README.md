@@ -31,3 +31,5 @@ environment：jdk 1.8 language level：8
 - 最小生成树 mst 20161121
 - 设计模式：观察者模式 observer 20161129
 - 智能问答系统 qa 20161130
+- Java百度百科爬虫 BaikeDataSource 20161205
+- 稀疏矩阵及三元组 matrix 20161207
