@@ -145,11 +145,11 @@ public class BaikeDataSource implements DataSource {
     }
 
     public static void main(String[] args) {
-        Map map = new HashMap<String, String>();
+        Map map = new LinkedHashMap<String, String>();
 
         try {
-            File f = new File("data/only_area.txt");
-            PrintStream ps = new PrintStream(new BufferedOutputStream(new FileOutputStream("data/only_area_validate.txt")));
+            File f = new File("data/fourthplace.txt");
+            PrintStream ps = new PrintStream(new BufferedOutputStream(new FileOutputStream("data/fourthplace_validate.txt")));
             BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(f), "utf-8"));
             String readline;
             while ((readline = br.readLine()) != null) {
