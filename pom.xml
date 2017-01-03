@@ -190,6 +190,12 @@
             <artifactId>ansj_seg</artifactId>
             <version>5.0.1</version>
         </dependency>
+        <!--mvel-->
+        <dependency>
+            <groupId>org.mvel</groupId>
+            <artifactId>mvel2</artifactId>
+            <version>2.3.1.Final</version>
+        </dependency>
     </dependencies>
     
 </project>

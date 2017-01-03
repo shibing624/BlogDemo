@@ -1,6 +1,6 @@
-package xm.ruleengine.config;
+package xm.ruleengine.selfengine.config;
 
-import xm.ruleengine.Context;
+import xm.ruleengine.selfengine.Context;
 
 /**
  * @author xuming

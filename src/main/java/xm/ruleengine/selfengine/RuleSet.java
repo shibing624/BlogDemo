@@ -1,6 +1,6 @@
-package xm.ruleengine;
+package xm.ruleengine.selfengine;
 
-import xm.ruleengine.config.Rule;
+import xm.ruleengine.selfengine.config.Rule;
 
 import java.util.ArrayList;
 import java.util.List;

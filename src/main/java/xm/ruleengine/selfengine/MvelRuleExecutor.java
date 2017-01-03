@@ -1,6 +1,6 @@
-package xm.ruleengine;
+package xm.ruleengine.selfengine;
 
-import xm.ruleengine.config.EL;
+import xm.ruleengine.selfengine.config.EL;
 
 /**
  * @author xuming
@@ -47,8 +47,6 @@ public class MvelRuleExecutor implements RuleExecutor<MvelRule> {
             MvelContext mvelContext = null;
             if (context instanceof MvelContext) {
                 mvelContext = (MvelContext) context;
-            } else {
-                mvelContext = new MvelContext(context);
             }
             return (Boolean) el.execute(condition, mvelContext);
         } catch (Exception e) {
@@ -67,8 +65,6 @@ public class MvelRuleExecutor implements RuleExecutor<MvelRule> {
             MvelContext mvelContext = null;
             if (context instanceof MvelContext) {
                 mvelContext = (MvelContext) context;
-            } else {
-                mvelContext = new MvelContext(context);
             }
 
             el.execute(action, mvelContext);

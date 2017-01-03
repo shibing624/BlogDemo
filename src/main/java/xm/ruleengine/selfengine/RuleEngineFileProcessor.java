@@ -1,4 +1,4 @@
-package xm.ruleengine;
+package xm.ruleengine.selfengine;
 
 /**
  * @author xuming
