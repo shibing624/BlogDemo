@@ -15,7 +15,7 @@ public class QuickSortSet {
         size = 0;
     }
 
-    boolean addLexeme(Lexeme lexeme) {
+    public boolean addLexeme(Lexeme lexeme) {
         Cell newCell = new Cell(lexeme);
         if (size == 0) {
             head = newCell;
@@ -55,15 +55,15 @@ public class QuickSortSet {
         return false;
     }
 
-    Lexeme peekFirst() {
+    public Lexeme peekFirst() {
         return (head != null) ? head.getLexeme() : null;
     }
 
-    Lexeme peekLast() {
+    public Lexeme peekLast() {
         return (tail != null) ? tail.getLexeme() : null;
     }
 
-    Lexeme pollFirst() {
+    public Lexeme pollFirst() {
         if (size == 1) {
             Lexeme first = head.getLexeme();
             head = null;
@@ -79,7 +79,7 @@ public class QuickSortSet {
         return null;
     }
 
-    Lexeme pollLast() {
+    public Lexeme pollLast() {
         if (size == 1) {
             Lexeme last = head.getLexeme();
             head = null;

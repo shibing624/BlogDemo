@@ -61,12 +61,14 @@ public class Lexeme implements Comparable<Lexeme> {
         this.begin = begin;
     }
 
-    public int getBeginPosition(){
-        return offset+begin;
+    public int getBeginPosition() {
+        return offset + begin;
     }
-    public int getEndPosition(){
-        return offset+begin+length;
+
+    public int getEndPosition() {
+        return offset + begin + length;
     }
+
     public int getLength() {
         return length;
     }
@@ -76,13 +78,13 @@ public class Lexeme implements Comparable<Lexeme> {
     }
 
     public String getLexemeText() {
-        if(lexemeText == null)return "";
+        if (lexemeText == null) return "";
         return lexemeText;
     }
 
     public void setLexemeText(String lexemeText) {
-        if(lexemeText == null){
-            this.lexemeText ="";
+        if (lexemeText == null) {
+            this.lexemeText = "";
             this.length = 0;
         }
         this.lexemeText = lexemeText;
@@ -109,36 +111,39 @@ public class Lexeme implements Comparable<Lexeme> {
         return false;
     }
 
-    public int hashCode(){
+    public int hashCode() {
         int absBegin = getBeginPosition();
         int absEnd = getEndPosition();
-        return (absBegin* 37) + (absEnd*31)+((absBegin *absEnd )%getLength()) *11;
+        return (absBegin * 37) + (absEnd * 31) + ((absBegin * absEnd) % getLength()) * 11;
     }
+
     @Override
     public int compareTo(Lexeme o) {
-        if(this.begin< o.getBegin()){
+        if (this.begin < o.getBegin()) {
             return -1;
-        }else if(this.begin == o.getBegin()){
-            if(length>o.getLength()){
+        } else if (this.begin == o.getBegin()) {
+            if (length > o.getLength()) {
                 return -1;
-            }else if(length==o.getLength()){
+            } else if (length == o.getLength()) {
                 return 0;
-            }else{
+            } else {
                 return 1;
             }
-        }else{
+        } else {
             return 1;
         }
     }
-    public boolean append(Lexeme lexeme,int lexemeType){
-        if(lexeme !=null && getEndPosition() == lexeme.getBeginPosition()){
+
+    public boolean isAppend(Lexeme lexeme, int lexemeType) {
+        if (lexeme != null && getEndPosition() == lexeme.getBeginPosition()) {
             this.length += lexeme.getLength();
             this.lexemeType = lexemeType;
             return true;
         }
         return false;
     }
-    public String toString(){
+
+    public String toString() {
         StringBuffer sb = new StringBuffer();
         sb.append(getBeginPosition())
                 .append("-")
