@@ -1,7 +1,5 @@
 package xm.ik.segment;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import xm.ik.collection.Lexeme;
 import xm.ik.util.CharacterUtil;
 
@@ -13,8 +11,6 @@ import java.util.Arrays;
  * @author xuming
  */
 public class LetterSegmenter implements ISegmenter {
-    private static final Logger LOG = LoggerFactory.getLogger(LetterSegmenter.class);
-
     public static final String SEGMENTER_NAME = "LETTER_SEGMENTER";
     private static final char[] LETTER_LINK_SYMBOL = new char[]{'#', '&', '+', '-', '.',
             '@', '_'};
@@ -70,7 +66,6 @@ public class LetterSegmenter implements ISegmenter {
                 englishEnd = englishStart;
             }
         } else {
-            // dealing
             if (CharacterUtil.CHAR_ENGLISH == context.getCurrentCharType()) {
                 // mark end cursor
                 englishEnd = context.getCursor();

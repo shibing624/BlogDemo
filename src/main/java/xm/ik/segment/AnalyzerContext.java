@@ -1,14 +1,16 @@
 package xm.ik.segment;
 
-import xm.ik.config.Config;
 import xm.ik.collection.Lexeme;
 import xm.ik.collection.LexemePath;
 import xm.ik.collection.QuickSortSet;
+import xm.ik.config.Config;
 import xm.ik.util.CharacterUtil;
 
 import java.io.IOException;
 import java.io.Reader;
 import java.util.*;
+
+import static xm.ik.dic.Dictionary.getSingleton;
 
 /**
  * analyzer context
@@ -40,7 +42,7 @@ public class AnalyzerContext {
         this.charTypes = new int[BUFF_SIZE];
         this.buffLocker = new HashSet<>();
         this.originalLexemes = new QuickSortSet();
-        this.pathMap = new HashMap<>();
+        this.pathMap = new LinkedHashMap<>();
         this.lexemeList = new LinkedList<>();
     }
 
@@ -64,6 +66,14 @@ public class AnalyzerContext {
         return charTypes[cursor];
     }
 
+    public LinkedList<Lexeme> getLexemeList() {
+        return lexemeList;
+    }
+
+    public void setLexemeList(LinkedList<Lexeme> lexemeList) {
+        this.lexemeList = lexemeList;
+    }
+
     public int fillBuffer(Reader reader) throws IOException {
         int readCount = 0;
         if (buffOffset == 0)
@@ -75,7 +85,7 @@ public class AnalyzerContext {
                 System.arraycopy(segmentBuff, cursor, segmentBuff, 0, offset);
                 readCount = offset;
             }
-            // deal with segmentBuff, start with (readed - anlyzed)
+            // deal with segmentBuff, start with (read - analyzed)
             readCount += reader.read(segmentBuff, offset, BUFF_SIZE - offset);
         }
         available = readCount;
@@ -143,8 +153,8 @@ public class AnalyzerContext {
      * output segmentation result to list
      */
     public void outputRawSegmentation() {
-        int index;
-        for (index = 0; index <= cursor; ) {
+        int index=0;
+        for (; index <= cursor; ) {
             // continue CJK
             if (CharacterUtil.CHAR_USELESS == charTypes[index]) {
                 index++;
@@ -154,6 +164,7 @@ public class AnalyzerContext {
             if (path != null) {
                 Lexeme lexeme = path.pollFirst();
                 while (lexeme != null) {
+                    lexeme.setLexemeText(String.valueOf(segmentBuff, lexeme.getBegin(), lexeme.getLength()));
                     lexemeList.add(lexeme);
                     // move index to end of lexeme
                     index = lexeme.getBegin() + lexeme.getLength();
@@ -176,16 +187,21 @@ public class AnalyzerContext {
 
     /**
      * output CJK single char
+     *
      * @param index
      */
     private void outputSingleCJK(int index) {
         if (CharacterUtil.CHAR_CHINESE == charTypes[index]) {
             Lexeme singleCharLexeme = new Lexeme(buffOffset, index, 1, Lexeme.TYPE_CNCHAR);
+            singleCharLexeme.setLexemeText(String.valueOf(segmentBuff, singleCharLexeme.getBegin(),
+                    singleCharLexeme.getLength()));
             lexemeList.add(singleCharLexeme);
         }
         if (CharacterUtil.CHAR_OTHER_CJK == charTypes[index]) {
-            Lexeme singleCahrLexeme = new Lexeme(buffOffset, index, 1, Lexeme.TYPE_OTHER_CJK);
-            lexemeList.add(singleCahrLexeme);
+            Lexeme singleCharLexeme = new Lexeme(buffOffset, index, 1, Lexeme.TYPE_OTHER_CJK);
+            singleCharLexeme.setLexemeText(String.valueOf(segmentBuff, singleCharLexeme.getBegin(),
+                    singleCharLexeme.getLength()));
+            lexemeList.add(singleCharLexeme);
         }
     }
 
@@ -195,7 +211,7 @@ public class AnalyzerContext {
         while (result != null) {
             // quantifier num word merge
             compound(result);
-            if (xm.ik.dic.Dictionary.getSingleton().isStopWord(segmentBuff, result.getBegin(), result.getLength())) {
+            if (getSingleton().isStopWord(segmentBuff, result.getBegin(), result.getLength())) {
                 result = lexemeList.pollFirst();
             } else {
                 result.setLexemeText(String.valueOf(segmentBuff, result.getBegin(), result.getLength()));

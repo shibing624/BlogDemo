@@ -48,47 +48,50 @@ public class Analyzer {
     private List<ISegmenter> loadSegmenters() {
         List<ISegmenter> segmenters = new ArrayList<>();
         segmenters.add(new LetterSegmenter());
-        segmenters.add(new CJKSegmenter());
         segmenters.add(new QuantifierSegmenter());
+        segmenters.add(new CJKSegmenter());
         return segmenters;
     }
 
-    public synchronized Lexeme next() {
-        Lexeme lexeme;
-        while ((lexeme = context.getNextLexeme()) == null) {
-            int available = 0;
-            try {
-                available = context.fillBuffer(this.input);
-            } catch (IOException e) {
-                System.err.println("io exception:" + this.input + ", " + e);
-            }
-            if (available <= 0) {
-                context.reset();
-                return null;
-            } else {
-                // init cursor
-                context.initCursor();
-                while (context.moveCursor()) {
-                    for (ISegmenter segmenter : segmenters)
-                        segmenter.analyze(context);
-                    // buffer is full, need new input new char
-                    if (context.needRefillBuffer()) break;
-                }
-                // reset segmenter list
-                segmenters.forEach(ISegmenter::reset);
-            }
-            // ambiguity word
-            ambiguitySegmenter.process(context, config.useSmart());
-            // output result to list, deal with CJK chars
-            context.outputRawSegmentation();
-            context.markBufferOffset();
+    public List<Lexeme> parse() {
+        int available = 0;
+        try {
+            available = context.fillBuffer(input);
+        } catch (IOException e) {
+            System.err.println("io exception:" + input + ", " + e);
         }
-        return lexeme;
+        if (available <= 0) {
+            context.reset();
+            return null;
+        } else {
+            // init cursor
+            context.initCursor();
+            do {
+                // 遍历子分词器
+                for (ISegmenter segmenter : segmenters) {
+                    segmenter.analyze(context);
+                }
+                // 字符缓冲区接近读完，需要读入新的字符
+                if (context.needRefillBuffer()) {
+                    break;
+                }
+                // 向前移动指针
+            } while (context.moveCursor());
+            // reset segmenter list
+            segmenters.forEach(ISegmenter::reset);
+        }
+        // ambiguity word
+        ambiguitySegmenter.process(context, config.useSmart());
+        // output result to list, deal with CJK chars
+        context.outputRawSegmentation();
+        context.markBufferOffset();
+        return context.getLexemeList();
     }
 
-    public synchronized void reset(Reader input) {
+    public void reset(Reader input) {
         this.input = input;
         context.reset();
         segmenters.forEach(ISegmenter::reset);
     }
+
 }

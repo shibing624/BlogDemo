@@ -143,15 +143,41 @@ public class Lexeme implements Comparable<Lexeme> {
         return false;
     }
 
+    public String getLexemeTypeString() {
+        switch (lexemeType) {
+            case TYPE_ENGLISH:
+                return "ENGLISH";
+            case TYPE_ARABIC:
+                return "ARABIC";
+            case TYPE_LETTER:
+                return "LETTER";
+            case TYPE_CNWORD:
+                return "CN_WORD";
+            case TYPE_CNCHAR:
+                return "CN_CHAR";
+            case TYPE_OTHER_CJK:
+                return "OTHER_CJK";
+            case TYPE_COUNT:
+                return "COUNT";
+            case TYPE_CNUM:
+                return "TYPE_CNUM";
+            case TYPE_CQUAN:
+                return "TYPE_CQUAN";
+            case TYPE_UNKNOWN:
+            default:
+                return "UNKONW";
+        }
+    }
+
     public String toString() {
         StringBuffer sb = new StringBuffer();
         sb.append(getBeginPosition())
                 .append("-")
                 .append(getEndPosition())
-                .append(" : ")
-                .append(this.lexemeText)
-                .append(" : \t")
-                .append(getLexemeType());
+                .append(": ")
+                .append(lexemeText)
+                .append("/")
+                .append(getLexemeTypeString());
         return sb.toString();
     }
 }
