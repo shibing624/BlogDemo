@@ -1,6 +1,6 @@
 package xm.ik.segment;
 
-import xm.ik.cfg.Config;
+import xm.ik.config.Config;
 import xm.ik.collection.Lexeme;
 import xm.ik.collection.LexemePath;
 import xm.ik.collection.QuickSortSet;
@@ -140,9 +140,9 @@ public class AnalyzerContext {
     }
 
     /**
-     * push segmentation result to list
+     * output segmentation result to list
      */
-    public void pushRawSegmentation() {
+    public void outputRawSegmentation() {
         int index;
         for (index = 0; index <= cursor; ) {
             // continue CJK
@@ -161,13 +161,13 @@ public class AnalyzerContext {
                     if (lexeme != null) {
                         // push the single word of path
                         for (; index < lexeme.getBegin(); index++) {
-                            pushSingleCJK(index);
+                            outputSingleCJK(index);
                         }
                     }
                 }
             } else {
                 // not in pathMap
-                pushSingleCJK(index);
+                outputSingleCJK(index);
                 index++;
             }
         }
@@ -175,10 +175,10 @@ public class AnalyzerContext {
     }
 
     /**
-     * push CJK single char
+     * output CJK single char
      * @param index
      */
-    private void pushSingleCJK(int index) {
+    private void outputSingleCJK(int index) {
         if (CharacterUtil.CHAR_CHINESE == charTypes[index]) {
             Lexeme singleCharLexeme = new Lexeme(buffOffset, index, 1, Lexeme.TYPE_CNCHAR);
             lexemeList.add(singleCharLexeme);

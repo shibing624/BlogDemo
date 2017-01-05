@@ -1,7 +1,7 @@
 package xm.ik.dic;
 
 import org.ansj.dic.DicReader;
-import xm.ik.cfg.Config;
+import xm.ik.config.Config;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -90,13 +90,17 @@ public class Dictionary {
         InputStream is = DicReader.getInputStream(config.getMainDictionary());
         if (is == null)
             throw new RuntimeException("main dictionary not found.");
+        long count = 0;
         try {
             BufferedReader br = new BufferedReader(new InputStreamReader(is, "UTF-8"), 512);
             String line;
             while ((line = br.readLine()) != null) {
-                if (!line.trim().equals(""))
+                if (!line.trim().equals("")) {
                     mainDictionary.fillSegment(line.trim().toLowerCase().toCharArray());
+                    count++;
+                }
             }
+            System.out.println("main dictionary load finish: " + config.getMainDictionary() + "; count: " + count);
         } catch (IOException e) {
             System.err.printf("main dictionary loading exception." + e);
         } finally {
@@ -141,7 +145,7 @@ public class Dictionary {
     private void loadStopWordDictionary() {
         stopWordDictionary = new DictionarySegment((char) 0);
         List<String> extStopWordDicts = config.getExtStopWordDictionarys();
-        if (extStopWordDicts != null) {
+        if (extStopWordDicts != null && extStopWordDicts.size() > 0) {
             for (String extStopWordDict : extStopWordDicts) {
                 InputStream is = DicReader.getInputStream(extStopWordDict);
                 if (is == null)

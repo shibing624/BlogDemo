@@ -10,13 +10,13 @@ public class LexemePath extends QuickSortSet implements Comparable<LexemePath> {
     private int end;
     private int length;
 
-    LexemePath() {
+    public LexemePath() {
         this.begin = -1;
         this.end = -1;
         this.length = 0;
     }
 
-    boolean addCrossLexeme(Lexeme lexeme) {
+    public boolean addCrossLexeme(Lexeme lexeme) {
         if (isEmpty()) {
             addLexeme(lexeme);
             begin = lexeme.getBegin();
@@ -34,7 +34,7 @@ public class LexemePath extends QuickSortSet implements Comparable<LexemePath> {
         return false;
     }
 
-    boolean addNotCorssLexeme(Lexeme lexeme) {
+    public boolean addNotCorssLexeme(Lexeme lexeme) {
         if (isEmpty()) {
             addLexeme(lexeme);
             begin = lexeme.getBegin();
@@ -53,7 +53,7 @@ public class LexemePath extends QuickSortSet implements Comparable<LexemePath> {
         return true;
     }
 
-    Lexeme removeTail() {
+    public Lexeme removeTail() {
         Lexeme tail = pollLast();
         if (isEmpty()) {
             begin = -1;
@@ -78,7 +78,7 @@ public class LexemePath extends QuickSortSet implements Comparable<LexemePath> {
                 || (begin >= lexeme.getBegin() && begin < lexeme.getBegin() + lexeme.getLength());
     }
 
-    int getXWeight() {
+    public int getXWeight() {
         int product = 1;
         Cell c = getHead();
         while (c != null && c.getLexeme() != null) {
@@ -88,7 +88,7 @@ public class LexemePath extends QuickSortSet implements Comparable<LexemePath> {
         return product;
     }
 
-    int getPWeight() {
+    public int getPWeight() {
         int pW = 0;
         int p = 0;
         Cell c = getHead();
@@ -100,7 +100,7 @@ public class LexemePath extends QuickSortSet implements Comparable<LexemePath> {
         return pW;
     }
 
-    LexemePath copy() {
+    public LexemePath copy() {
         LexemePath copy = new LexemePath();
         copy.begin = begin;
         copy.end = end;
