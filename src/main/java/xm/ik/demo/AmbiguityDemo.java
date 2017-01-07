@@ -12,11 +12,10 @@ import java.util.List;
 public class AmbiguityDemo {
     @Test
     public void test1() {
-        System.out.println("starting...");
         String str =
-                "结婚和尚未结婚的lili。" +
+                "结婚和尚未结婚的小米。" +
 //                "我在新东方学习中国英语课程 你喜欢什么样的人.有三个人买了4框梨子。" +
-                "最新电脑是windows2017,这不是知名商标。";
+                "最新电脑我喜欢！这里有十二个人";
         List<Lexeme> lexemeList = new Tokenizer().parse(str);
         System.out.println(str);
         lexemeList.forEach(System.out::println);

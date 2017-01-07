@@ -9,6 +9,7 @@ import xm.ik.segment.*;
 import java.io.IOException;
 import java.io.Reader;
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -20,6 +21,7 @@ public class Analyzer {
     private AnalyzerContext context;
     private List<ISegmenter> segmenters;
     private AmbiguitySegmenter ambiguitySegmenter;
+    private List<Lexeme> lexemes = new LinkedList<>();
 
     public Analyzer(Reader input, Config config) {
         this.input = input;
@@ -54,38 +56,41 @@ public class Analyzer {
     }
 
     public List<Lexeme> parse() {
-        int available = 0;
-        try {
-            available = context.fillBuffer(input);
-        } catch (IOException e) {
-            System.err.println("io exception:" + input + ", " + e);
+        while (context.getNextLexeme() == null) {
+            int available = 0;
+            try {
+                available = context.fillBuffer(input);
+            } catch (IOException e) {
+                System.err.println("io exception:" + input + ", " + e);
+            }
+            if (available <= 0) {
+                context.reset();
+                return null;
+            } else {
+                // init cursor
+                context.initCursor();
+                do {
+                    for (ISegmenter segmenter : segmenters) {
+                        segmenter.analyze(context);
+                    }
+                    if (context.needRefillBuffer()) {
+                        break;
+                    }
+                } while (context.moveCursor());
+                // reset segmenter list
+                segmenters.forEach(ISegmenter::reset);
+            }
+            // ambiguity word
+            ambiguitySegmenter.process(context, config.useSmart());
+            // output result to list, deal with CJK chars
+            context.outputRawSegmentation();
+            context.markBufferOffset();
         }
-        if (available <= 0) {
-            context.reset();
-            return null;
-        } else {
-            // init cursor
-            context.initCursor();
-            do {
-                // 遍历子分词器
-                for (ISegmenter segmenter : segmenters) {
-                    segmenter.analyze(context);
-                }
-                // 字符缓冲区接近读完，需要读入新的字符
-                if (context.needRefillBuffer()) {
-                    break;
-                }
-                // 向前移动指针
-            } while (context.moveCursor());
-            // reset segmenter list
-            segmenters.forEach(ISegmenter::reset);
-        }
-        // ambiguity word
-        ambiguitySegmenter.process(context, config.useSmart());
-        // output result to list, deal with CJK chars
-        context.outputRawSegmentation();
-        context.markBufferOffset();
         return context.getLexemeList();
+    }
+
+    public List<Lexeme> parseStr(String str) {
+        return null;
     }
 
     public void reset(Reader input) {

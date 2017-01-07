@@ -12,9 +12,9 @@ import java.util.Arrays;
  */
 public class LetterSegmenter implements ISegmenter {
     public static final String SEGMENTER_NAME = "LETTER_SEGMENTER";
-    private static final char[] LETTER_LINK_SYMBOL = new char[]{'#', '&', '+', '-', '.',
-            '@', '_'};
-    private static final char[] NUM_LINK_SYMBOL = new char[]{',', '.'};
+    private static final char[] LETTER_LINK_SYMBOL = new char[]{'#', '&', '+', '-', '*',',',
+            '@', '_','。','，','？','！','《','》','：','“','”','（','）','【','】'};
+    private static final char[] NUM_LINK_SYMBOL = new char[]{'=', '.'};
     private int start;
     private int end;
     private int englishStart;
@@ -40,7 +40,7 @@ public class LetterSegmenter implements ISegmenter {
         isLock = processEnglishLetter(context) || isLock;
         // arabic letter
         isLock = processArabicLetter(context) || isLock;
-        // english and arabic mixed, attention last process it
+        // english mix with arabic
         isLock = processEnglishNumMixLetter(context) || isLock;
 
         // lock buffer
@@ -72,6 +72,8 @@ public class LetterSegmenter implements ISegmenter {
             } else {
                 Lexeme newLexeme = new Lexeme(context.getBuffOffset(), englishStart,
                         englishEnd - englishStart + 1, Lexeme.TYPE_ENGLISH);
+                newLexeme.setLexemeText(String.valueOf(context.getSegmentBuff(),
+                        newLexeme.getBegin(), newLexeme.getLength()));
                 context.addLexeme(newLexeme);
                 englishStart = -1;
                 englishEnd = -1;
@@ -82,6 +84,8 @@ public class LetterSegmenter implements ISegmenter {
             if (englishStart != -1 && englishEnd != -1) {
                 Lexeme newLexeme = new Lexeme(context.getBuffOffset(), englishStart,
                         englishEnd - englishStart + 1, Lexeme.TYPE_ENGLISH);
+                newLexeme.setLexemeText(String.valueOf(context.getSegmentBuff(),
+                        newLexeme.getBegin(), newLexeme.getLength()));
                 context.addLexeme(newLexeme);
                 englishStart = -1;
                 englishEnd = -1;
@@ -115,10 +119,13 @@ public class LetterSegmenter implements ISegmenter {
             else if (CharacterUtil.CHAR_USELESS == context.getCurrentCharType()
                     && isNumLinkSymbol(context.getCurrentChar())) {
                 // do nothing
+                System.out.println(context.getCurrentChar());
             } else {
                 // not arabic char, output
                 Lexeme newLexeme = new Lexeme(context.getBuffOffset(), arabicStart,
                         arabicEnd - arabicStart + 1, Lexeme.TYPE_ARABIC);
+                newLexeme.setLexemeText(String.valueOf(context.getSegmentBuff(),
+                        newLexeme.getBegin(), newLexeme.getLength()));
                 context.addLexeme(newLexeme);
                 arabicStart = -1;
                 arabicEnd = -1;
@@ -129,6 +136,8 @@ public class LetterSegmenter implements ISegmenter {
             if (arabicStart != -1 && arabicEnd != -1) {
                 Lexeme newLexeme = new Lexeme(context.getBuffOffset(), arabicStart,
                         arabicEnd - arabicStart + 1, Lexeme.TYPE_ARABIC);
+                newLexeme.setLexemeText(String.valueOf(context.getSegmentBuff(),
+                        newLexeme.getBegin(), newLexeme.getLength()));
                 context.addLexeme(newLexeme);
                 arabicStart = -1;
                 arabicEnd = -1;
@@ -169,6 +178,8 @@ public class LetterSegmenter implements ISegmenter {
                 // not letter char, output
                 Lexeme newLexeme = new Lexeme(context.getBuffOffset(), start,
                         end - start + 1, Lexeme.TYPE_LETTER);
+                newLexeme.setLexemeText(String.valueOf(context.getSegmentBuff(),
+                        newLexeme.getBegin(), newLexeme.getLength()));
                 context.addLexeme(newLexeme);
                 arabicStart = -1;
                 arabicEnd = -1;
@@ -179,6 +190,8 @@ public class LetterSegmenter implements ISegmenter {
             if (start != -1 && end != -1) {
                 Lexeme newLexeme = new Lexeme(context.getBuffOffset(), start,
                         end - start + 1, Lexeme.TYPE_LETTER);
+                newLexeme.setLexemeText(String.valueOf(context.getSegmentBuff(),
+                        newLexeme.getBegin(), newLexeme.getLength()));
                 context.addLexeme(newLexeme);
                 arabicStart = -1;
                 arabicEnd = -1;

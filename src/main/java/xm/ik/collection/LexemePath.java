@@ -34,7 +34,7 @@ public class LexemePath extends QuickSortSet implements Comparable<LexemePath> {
         return false;
     }
 
-    public boolean addNotCorssLexeme(Lexeme lexeme) {
+    public boolean addNotCrossLexeme(Lexeme lexeme) {
         if (isEmpty()) {
             addLexeme(lexeme);
             begin = lexeme.getBegin();
@@ -68,7 +68,7 @@ public class LexemePath extends QuickSortSet implements Comparable<LexemePath> {
     }
 
     /**
-     * ambigulity lexeme, check the position of split word
+     * ambiguity lexeme, check the position of split word
      *
      * @param lexeme
      * @return

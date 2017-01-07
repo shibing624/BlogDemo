@@ -9,12 +9,14 @@ import java.util.Stack;
 import java.util.TreeSet;
 
 /**
+ * deal with ambiguity conflict
+ *
  * @author xuming
  */
 public class AmbiguitySegmenter {
-
     /**
      * Ambiguity processing
+     *
      * @param context
      * @param useSmart
      */
@@ -95,16 +97,16 @@ public class AmbiguitySegmenter {
      */
     private Stack<Cell> forwardPath(Cell cell, LexemePath option) {
         // conflict stack
-        Stack<Cell> conflickStack = new Stack<>();
+        Stack<Cell> conflictStack = new Stack<>();
         Cell c = cell;
         // iter the lexeme list
         while (c != null && c.getLexeme() != null) {
-            if (!option.addNotCorssLexeme(c.getLexeme())) {
-                conflickStack.push(c);
+            if (!option.addNotCrossLexeme(c.getLexeme())) {
+                conflictStack.push(c);
             }
             c = c.getNext();
         }
-        return conflickStack;
+        return conflictStack;
     }
 
 }

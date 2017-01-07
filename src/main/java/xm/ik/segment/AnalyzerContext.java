@@ -10,8 +10,6 @@ import java.io.IOException;
 import java.io.Reader;
 import java.util.*;
 
-import static xm.ik.dic.Dictionary.getSingleton;
-
 /**
  * analyzer context
  *
@@ -203,16 +201,22 @@ public class AnalyzerContext {
                     singleCharLexeme.getLength()));
             lexemeList.add(singleCharLexeme);
         }
+        if(CharacterUtil.CHAR_USELESS == charTypes[index]){
+            Lexeme singleCharLexeme = new Lexeme(buffOffset, index, 1, Lexeme.TYPE_CN_SYMBOL);
+            singleCharLexeme.setLexemeText(String.valueOf(segmentBuff, singleCharLexeme.getBegin(),
+                    singleCharLexeme.getLength()));
+            lexemeList.add(singleCharLexeme);
+        }
     }
 
     public Lexeme getNextLexeme() {
         // remove first lexeme
-        Lexeme result = lexemeList.pollFirst();
+        Lexeme result = lexemeList.peekFirst();
         while (result != null) {
             // quantifier num word merge
             compound(result);
-            if (getSingleton().isStopWord(segmentBuff, result.getBegin(), result.getLength())) {
-                result = lexemeList.pollFirst();
+            if (xm.ik.dic.Dictionary.getSingleton().isStopWord(segmentBuff, result.getBegin(), result.getLength())) {
+                result = lexemeList.peekFirst();
             } else {
                 result.setLexemeText(String.valueOf(segmentBuff, result.getBegin(), result.getLength()));
                 break;

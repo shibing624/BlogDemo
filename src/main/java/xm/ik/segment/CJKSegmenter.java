@@ -35,10 +35,14 @@ public class CJKSegmenter implements ISegmenter {
                         // output lexeme
                         Lexeme newLexeme = new Lexeme(context.getBuffOffset(), hit.getBegin(),
                                 context.getCursor() - hit.getBegin() + 1, Lexeme.TYPE_CNWORD);
+                        newLexeme.setLexemeText(String.valueOf(context.getSegmentBuff(),
+                                newLexeme.getBegin(), newLexeme.getLength()));
                         context.addLexeme(newLexeme);
                         // not same prefix, remove hit
                         if (!hit.isPrefix()) hits.remove(hit);
-                    } else if (hit.isUnmatch()) hits.remove(hit);
+                    } else if (hit.isUnmatch()){
+                        hits.remove(hit);
+                    }
                 }
             }
             // match single word(char)
@@ -48,6 +52,8 @@ public class CJKSegmenter implements ISegmenter {
                 // head word is match
                 Lexeme newLexeme = new Lexeme(context.getBuffOffset(), context.getCursor(), 1,
                         Lexeme.TYPE_CNWORD);
+                newLexeme.setLexemeText(String.valueOf(context.getSegmentBuff(),
+                        newLexeme.getBegin(), newLexeme.getLength()));
                 context.addLexeme(newLexeme);
                 if (singleCharHit.isPrefix()) hits.add(singleCharHit);
             } else if (singleCharHit.isPrefix()) {

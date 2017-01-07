@@ -121,13 +121,18 @@ public class Dictionary {
                 InputStream is = DicReader.getInputStream(extdict);
                 if (is == null)
                     continue;
+                long count = 0;
                 try {
                     BufferedReader br = new BufferedReader(new InputStreamReader(is, "UTF-8"), 512);
                     String line;
                     while ((line = br.readLine()) != null) {
-                        if (!line.trim().equals(""))
+                        if (!line.trim().equals("")) {
                             mainDictionary.fillSegment(line.trim().toLowerCase().toCharArray());
+                            count++;
+                        }
                     }
+                    System.out.println("extension dictionary load finish: " +
+                            extdict + "; count: " + count);
                 } catch (IOException e) {
                     System.err.printf("extension dictionary loading exception." + e);
                 } finally {
@@ -150,13 +155,18 @@ public class Dictionary {
                 InputStream is = DicReader.getInputStream(extStopWordDict);
                 if (is == null)
                     continue;
+                long count = 0;
                 try {
                     BufferedReader br = new BufferedReader(new InputStreamReader(is, "UTF-8"), 512);
                     String line;
                     while ((line = br.readLine()) != null) {
-                        if (!line.trim().equals(""))
+                        if (!line.trim().equals("")) {
                             stopWordDictionary.fillSegment(line.trim().toLowerCase().toCharArray());
+                            count++;
+                        }
                     }
+                    System.out.println("extension stop word dictionary load finish: " +
+                            extStopWordDict + "; count: " + count);
                 } catch (IOException e) {
                     System.err.printf("extension stop word dictionary loading exception." + e);
                 } finally {

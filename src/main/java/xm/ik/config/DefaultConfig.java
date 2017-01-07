@@ -17,7 +17,7 @@ import java.util.Properties;
 public class DefaultConfig implements Config {
     private static final String MAIN_DICT_PATH = "main.dic";
     private static final String QUANTIFIER_DICT_PATH = "quantifier.dic";
-    private static final String FILE_NAME = "IKAnalyzer.config.xml";
+    private static final String FILE_NAME = "ik.config.xml";
     private static final String EXT_DICT = "ext_dict";
     private static final String EXT_STOP = "ext_stopwords";
     private Properties properties;

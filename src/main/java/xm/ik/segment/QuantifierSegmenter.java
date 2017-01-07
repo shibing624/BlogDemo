@@ -82,9 +82,11 @@ public class QuantifierSegmenter implements ISegmenter {
 
     private void outputNumLexeme(AnalyzerContext context) {
         if (start > -1 && end > -1) {
-            Lexeme lexeme = new Lexeme(context.getBuffOffset(), start, end - start + 1,
+            Lexeme newLexeme = new Lexeme(context.getBuffOffset(), start, end - start + 1,
                     Lexeme.TYPE_CNUM);
-            context.addLexeme(lexeme);
+            newLexeme.setLexemeText(String.valueOf(context.getSegmentBuff(),
+                    newLexeme.getBegin(), newLexeme.getLength()));
+            context.addLexeme(newLexeme);
         }
     }
 
@@ -101,6 +103,8 @@ public class QuantifierSegmenter implements ISegmenter {
                         // output matched word
                         Lexeme newLexeme = new Lexeme(context.getBuffOffset(), hit.getBegin(),
                                 context.getCursor() - hit.getBegin() + 1, Lexeme.TYPE_COUNT);
+                        newLexeme.setLexemeText(String.valueOf(context.getSegmentBuff(),
+                                newLexeme.getBegin(), newLexeme.getLength()));
                         context.addLexeme(newLexeme);
                         if (!hit.isPrefix())
                             hits.remove(hit);
@@ -114,6 +118,8 @@ public class QuantifierSegmenter implements ISegmenter {
             if (singleCharHit.isMatch()) {
                 Lexeme newLexeme = new Lexeme(context.getBuffOffset(), context.getCursor(), 1,
                         Lexeme.TYPE_COUNT);
+                newLexeme.setLexemeText(String.valueOf(context.getSegmentBuff(),
+                        newLexeme.getBegin(), newLexeme.getLength()));
                 context.addLexeme(newLexeme);
                 if (singleCharHit.isPrefix()) {
                     hits.add(singleCharHit);
