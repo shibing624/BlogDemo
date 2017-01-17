@@ -28,9 +28,7 @@ public class StreamDemo {
     public static void main(String... args) {
         List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 4, 45, 7, 20);
         Stream<Integer> stream = numbers.stream();
-        stream.filter(x -> x % 2 == 0)
-                .map(x -> x * x)
-                .forEach(System.out::println);
+        stream.filter(x -> x % 2 == 0).map(x -> x * x).forEach(System.out::println);
 
         // 内部迭代代码 从而允许类库进行各种各样的优化（例如乱序执行、惰性求值和并行等等）。总的来说，内部迭代使得外部迭代中不可能实现的优化成为可能。
         numbers.forEach(num -> System.out.print(num + ","));
@@ -86,6 +84,7 @@ public class StreamDemo {
         Map<Integer, String> m2 = new HashMap<>();
 
         Comparator<String> c = (String s1, String s2) -> s1.compareToIgnoreCase(s2);
+
         Boolean flag = false;
         Set<Integer> si = flag ? Collections.singleton(23) : Collections.emptySet();
 
@@ -95,12 +94,14 @@ public class StreamDemo {
 
 
         numbers.stream().filter(i -> i.toString().length() == 1).forEach(i -> aList.add(i));
+
         System.out.println(aList.size() + aList.toString());
-        int sumn = numbers.stream()
+
+        int sumn = numbers
+                .stream()
                 .mapToInt(i -> i.intValue())
                 .reduce(0, (x, y) -> x + y);
-        System.out.println(sumn + ":sumn");
-
+        System.out.println(sumn + ":sum");
     }
 
 

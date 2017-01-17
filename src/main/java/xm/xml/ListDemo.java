@@ -12,6 +12,7 @@ import java.util.List;
 public class ListDemo {
 
     public static void main(String[] args) throws Exception {
+        org.junit.Assert.assertEquals(1,(2-1));
         SAXReader reader = new SAXReader();
         File file = new File("properties/books.xml");
         Document document = reader.read(file);
