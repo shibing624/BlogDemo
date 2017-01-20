@@ -1,4 +1,4 @@
-package xm.math.java8;
+package xm.java8;
 
 import java.util.function.Supplier;
 import java.util.stream.Stream;

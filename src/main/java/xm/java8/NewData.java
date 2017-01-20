@@ -1,4 +1,4 @@
-package xm.math.java8;
+package xm.java8;
 
 import java.time.DayOfWeek;
 import java.time.LocalDate;

@@ -1,4 +1,4 @@
-# BlogCode
+# blogcode
 csdn blog: http://blog.csdn.net/mingzai624
 
 >包括博客中的算法、游戏源码等。
@@ -33,3 +33,6 @@ environment：jdk 1.8 language level：8
 - 智能问答系统 qa 20161130
 - Java百度百科爬虫 BaikeDataSource 20161205
 - 稀疏矩阵及三元组 matrix 20161207
+- IK中文分词器 ik 20161229
+- log4j2日志功能 log4j2 20170120
+
