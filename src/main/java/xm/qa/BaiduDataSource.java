@@ -6,7 +6,7 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import xm.qa.sql.SQLUtil;
+import xm.qa.sql.SqlUtil;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
@@ -55,7 +55,7 @@ public class BaiduDataSource implements DataSource {
     @Override
     public Question getAnswerByQuestion(String questionStr) {
         // 1.select local nosql
-        Question question = SQLUtil.getQuestionFromDatabase("baidu:", questionStr);
+        Question question = SqlUtil.getQuestionFromDatabase("baidu:", questionStr);
         if (question != null) {
             LOG.info("select question from nosql:" + question.getQuestion());
             return question;
@@ -88,7 +88,7 @@ public class BaiduDataSource implements DataSource {
         }
         // 3.save search result to nosql
         if (question.getEvidences().size() > 7) {
-            SQLUtil.saveQuestionToDatabase("baidu:", question);
+            SqlUtil.saveQuestionToDatabase("baidu:", question);
         }
         return question;
     }

@@ -5,11 +5,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.xm</groupId>
-    <artifactId>blogcode</artifactId>
+    <artifactId>blog-code</artifactId>
     <version>1.1</version>
     <packaging>jar</packaging>
 
-    <name>blogcode</name>
+    <name>blog-code</name>
     <url>http://blog.csdn.net/mingzai624/</url>
     <description>
         blog code
@@ -25,7 +25,7 @@
     <inceptionYear>2016</inceptionYear>
     <developers>
         <developer>
-            <name>xuming</name>
+            <name>XuMing</name>
             <email>507153809@qq.com</email>
         </developer>
     </developers>
@@ -206,6 +206,13 @@
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-core</artifactId>
             <version>2.7</version>
+        </dependency>
+        <!--WEKA-->
+        <!-- https://mvnrepository.com/artifact/nz.ac.waikato.cms.weka/weka-stable -->
+        <dependency>
+            <groupId>nz.ac.waikato.cms.weka</groupId>
+            <artifactId>weka-stable</artifactId>
+            <version>3.8.0</version>
         </dependency>
     </dependencies>
     

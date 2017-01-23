@@ -12,12 +12,12 @@ import java.util.List;
 /**
  * @author xuming
  */
-public class SQLUtil {
-    private static final Logger LOG = LoggerFactory.getLogger(SQLUtil.class);
-    private static final String DRIVIER = "com.mysql.jdbc.Driver";
-    private static final String URL = "jdbc:mysql://127.0.0.1:3306/qa?useUnicode=true&characterEncoding=utf8";
-    private static final String USER = "root";
-    private static final String PASSWORD = "root";
+public class SqlUtil {
+    private static final Logger LOG = LoggerFactory.getLogger(SqlUtil.class);
+    public static final String DRIVIER = "com.mysql.jdbc.Driver";
+    public static final String URL = "jdbc:mysql://127.0.0.1:3306/qa?useUnicode=true&characterEncoding=utf8";
+    public static final String USER = "root";
+    public static final String PASSWORD = "root";
     static {
         try{
             Class.forName(DRIVIER);
@@ -25,7 +25,7 @@ public class SQLUtil {
             LOG.error(e.toString());
         }
     }
-    private SQLUtil(){}
+    private SqlUtil(){}
 
     public static Connection getConnection(){
         Connection conn = null;
