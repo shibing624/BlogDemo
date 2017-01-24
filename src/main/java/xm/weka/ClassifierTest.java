@@ -139,6 +139,7 @@ public class ClassifierTest {
         */
 
         Classifier classifier = new J48();
+
         int seed = 1234;
         int folds = 10;
 
