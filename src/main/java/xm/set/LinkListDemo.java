@@ -1,4 +1,4 @@
-package xm.list;
+package xm.set;
 
 import java.util.*;
 
