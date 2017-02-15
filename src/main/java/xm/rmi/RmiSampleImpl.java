@@ -8,11 +8,17 @@ import java.rmi.server.UnicastRemoteObject;
  */
 public class RmiSampleImpl extends UnicastRemoteObject implements RmiSample {
     protected RmiSampleImpl() throws RemoteException {
-        super();
     }
 
     @Override
     public int sum(int a, int b) throws RemoteException {
         return a+b;
     }
+
+    @Override
+    public String say(String name) throws RemoteException {
+        return name;
+    }
+
+
 }
