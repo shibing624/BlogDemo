@@ -31,7 +31,9 @@ public class ClassifierTest {
     }
 
     @Test
-    public void testLinearRegression() throws Exception {
+    public void testLinearRegression(
+
+    ) throws Exception {
         Instances dataset = ConverterUtils.DataSource.read(WEATHER_NOMINAL_PATH);
         dataset.setClassIndex(dataset.numAttributes() - 1);
         LinearRegression linearRegression = new LinearRegression();

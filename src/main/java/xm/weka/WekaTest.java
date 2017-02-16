@@ -37,7 +37,6 @@ public class WekaTest {
             data.setClassIndex(data.numAttributes() - 1);
         System.out.println(data);
 
-
     }
 
     @Test

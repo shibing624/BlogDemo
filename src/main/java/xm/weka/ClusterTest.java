@@ -31,12 +31,12 @@ public class ClusterTest {
     public void testEvaluation() throws Exception {
         String filePath = WEKA_PATH + "contact-lenses.arff";
         Instances instances = ConverterUtils.DataSource.read(filePath);
-        // 1种
+        // 第1种
         String[] options = new String[]{"-t", filePath};
         String output = ClusterEvaluation.evaluateClusterer(new EM(), options);
         pln(output);
 
-        // 2种
+        // 第2种
         DensityBasedClusterer dbc = new EM();
         dbc.buildClusterer(instances);
         ClusterEvaluation clusterEvaluation = new ClusterEvaluation();
@@ -44,7 +44,7 @@ public class ClusterTest {
         clusterEvaluation.evaluateClusterer(new Instances(instances));
         pln(clusterEvaluation.clusterResultsToString());
 
-        // 3种
+        // 第3种
         // 基于密度的聚类器交叉验证
         DensityBasedClusterer newdbc = new EM();
         double logLikelyhood = ClusterEvaluation.crossValidateModel(newdbc, instances, 10, instances.getRandomNumberGenerator(1234));
