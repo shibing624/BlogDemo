@@ -7,6 +7,7 @@ import weka.classifiers.Evaluation;
 import weka.classifiers.bayes.NaiveBayesUpdateable;
 import weka.classifiers.functions.LinearRegression;
 import weka.classifiers.trees.J48;
+import weka.classifiers.trees.RandomForest;
 import weka.core.*;
 import weka.core.converters.ArffLoader;
 import weka.core.converters.ConverterUtils;
@@ -26,14 +27,12 @@ public class ClassifierTest {
     public static final String SEGMENT_TEST_PATH = "data/weka/segment-test.arff";
     public static final String IONOSPHERE_PATH = "data/weka/ionosphere.arff";
 
-    public static final void pln(String str) {
+    public static void pln(String str) {
         System.out.println(str);
     }
 
     @Test
-    public void testLinearRegression(
-
-    ) throws Exception {
+    public void testLinearRegression() throws Exception {
         Instances dataset = ConverterUtils.DataSource.read(WEATHER_NOMINAL_PATH);
         dataset.setClassIndex(dataset.numAttributes() - 1);
         LinearRegression linearRegression = new LinearRegression();
@@ -86,10 +85,22 @@ public class ClassifierTest {
         System.out.println(tree);
     }
 
+    @Test
+    public void testRandomForestClassifier() throws Exception {
+        ArffLoader loader = new ArffLoader();
+        loader.setFile(new File(WEKA_PATH + "segment-challenge.arff"));
+        Instances instances = loader.getDataSet();
+        instances.setClassIndex(instances.numAttributes() - 1);
+        System.out.println(instances);
+        System.out.println("------------");
+
+        RandomForest rf = new RandomForest();
+        rf.buildClassifier(instances);
+        System.out.println(rf);
+    }
+
     /**
      * 利用训练集预测测试集的分类，批量处理
-     *
-     * @throws Exception
      */
     @Test
     public void testOutputClassDistribution() throws Exception {
@@ -204,10 +215,7 @@ public class ClassifierTest {
             for (int j = 0; j < pred.numInstances(); j++)
                 predictedData.add(pred.instance(j));
         }
-        if (classifier instanceof OptionHandler)
-            pln("classifier:" + classifier.getClass().getName() + " " + Utils.joinOptions(((OptionHandler) classifier).getOptions()));
-        else
-            pln("classifier:" + Utils.toCommandLine(classifier));
+        pln("classifier:" + classifier.getClass().getName() + " " + Utils.joinOptions(((OptionHandler) classifier).getOptions()));
         pln("data:" + data.relationName());
         pln("seed:" + seed);
         pln(eval.toSummaryString("=== " + folds + " test ===", false));
