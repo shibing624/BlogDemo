@@ -1,5 +1,7 @@
 package xm.rmi;
 
+import xm.qa.Question;
+
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 
@@ -17,8 +19,11 @@ public class RmiSampleImpl extends UnicastRemoteObject implements RmiSample {
 
     @Override
     public String say(String name) throws RemoteException {
+        Question question = new Question();
+        name = question.toString();
         return name;
     }
+
 
 
 }
