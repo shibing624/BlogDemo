@@ -29,10 +29,11 @@ public class RmiSampleClient {
 
     private static void outputOther() {
         try {
+            System.setProperty("java.security.policy", "AllPermission.policy");
             RmiSample rmiSample = (RmiSample) Naming.lookup("rmi://localhost:5858/rmiserver");
             System.out.println("client start success.");
             System.out.println("1+2=" + rmiSample.sum(1, 2));
-            System.out.println("world:" + rmiSample.say("world"));
+            System.out.println("segment:" + rmiSample.say("我爱中国，我喜欢结婚和尚未结婚的lili小姐姐"));
         } catch (RemoteException exc) {
             System.out.println("Error in lookup: " + exc.toString());
         } catch (MalformedURLException exc) {

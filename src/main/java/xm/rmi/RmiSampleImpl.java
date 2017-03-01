@@ -1,6 +1,6 @@
 package xm.rmi;
 
-import xm.qa.Question;
+import org.ansj.splitWord.analysis.ToAnalysis;
 
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
@@ -14,16 +14,13 @@ public class RmiSampleImpl extends UnicastRemoteObject implements RmiSample {
 
     @Override
     public int sum(int a, int b) throws RemoteException {
-        return a+b;
+        return a + b;
     }
 
     @Override
-    public String say(String name) throws RemoteException {
-        Question question = new Question();
-        name = question.toString();
-        return name;
+    public String say(String str) throws RemoteException {
+        return ToAnalysis.parse(str).toString();
     }
-
 
 
 }

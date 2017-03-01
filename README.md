@@ -35,4 +35,6 @@ environment：jdk 1.8 language level：8
 - 稀疏矩阵及三元组 matrix 20161207
 - IK中文分词器 ik 20161229
 - log4j2日志功能 log4j2 20170120
+- Netty的helloworld netty 20170228
+- 轻量级分布式rpc框架 rpc 20170301
 

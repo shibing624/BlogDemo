@@ -39,7 +39,7 @@ public class RmiSampleServer {
             registry.rebind("rmiserver",rmiSample);
             System.out.println("server is ready.");
         } catch (RemoteException e) {
-            System.out.println(e);
+            System.out.println("RemoteException:"+e);
         }
         return false;
     }
