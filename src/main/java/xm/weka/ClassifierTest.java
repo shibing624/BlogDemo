@@ -1,11 +1,14 @@
 package xm.weka;
 
 import org.junit.Test;
+import weka.attributeSelection.CfsSubsetEval;
+import weka.attributeSelection.GreedyStepwise;
 import weka.classifiers.AbstractClassifier;
 import weka.classifiers.Classifier;
 import weka.classifiers.Evaluation;
 import weka.classifiers.bayes.NaiveBayesUpdateable;
 import weka.classifiers.functions.LinearRegression;
+import weka.classifiers.meta.AttributeSelectedClassifier;
 import weka.classifiers.trees.J48;
 import weka.classifiers.trees.RandomForest;
 import weka.core.*;
@@ -15,6 +18,7 @@ import weka.filters.Filter;
 import weka.filters.supervised.attribute.AddClassification;
 
 import java.io.File;
+import java.util.Random;
 
 /**
  * @author xuming
@@ -33,7 +37,7 @@ public class ClassifierTest {
 
     @Test
     public void testLinearRegression() throws Exception {
-        Instances dataset = ConverterUtils.DataSource.read(WEATHER_NOMINAL_PATH);
+        Instances dataset = ConverterUtils.DataSource.read(WEKA_PATH + "houses.arff");
         dataset.setClassIndex(dataset.numAttributes() - 1);
         LinearRegression linearRegression = new LinearRegression();
         try {
@@ -97,6 +101,26 @@ public class ClassifierTest {
         RandomForest rf = new RandomForest();
         rf.buildClassifier(instances);
         System.out.println(rf);
+    }
+
+    // 元分类器
+    @Test
+    public void testMetaClassifier() throws Exception {
+        Instances data = ConverterUtils.DataSource.read(WEATHER_NUMERIC_PATH);
+        if (data.classIndex() == -1)
+            data.setClassIndex(data.numAttributes() - 1);
+
+        AttributeSelectedClassifier classifier = new AttributeSelectedClassifier();
+        CfsSubsetEval eval = new CfsSubsetEval();
+        GreedyStepwise stepwise = new GreedyStepwise();
+        stepwise.setSearchBackwards(true);
+        J48 base = new J48();
+        classifier.setClassifier(base);
+        classifier.setEvaluator(eval);
+        classifier.setSearch(stepwise);
+        Evaluation evaluation = new Evaluation(data);
+        evaluation.crossValidateModel(classifier, data, 10, new Random(1234));
+        pln(evaluation.toSummaryString());
     }
 
     /**

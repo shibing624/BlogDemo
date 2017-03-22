@@ -80,12 +80,12 @@ public class WekaTest {
         instances.setClassIndex(instances.numAttributes() - 1);
         System.out.println(instances);
         String[] options = new String[2];
-        options[0]  = "-R";
+        options[0] = "-R";
         options[1] = "1";
         Remove remove = new Remove();
         remove.setOptions(options);
         remove.setInputFormat(instances);
-        Instances newData = Filter.useFilter(instances,remove);
+        Instances newData = Filter.useFilter(instances, remove);
         System.out.println(newData);
     }
 
@@ -104,14 +104,14 @@ public class WekaTest {
         fc.setClassifier(j48);
         fc.buildClassifier(instances);
         System.out.println(fc);
-        for(int i =0 ;i<instances.numInstances();i++){
+        for (int i = 0; i < instances.numInstances(); i++) {
             double pred = fc.classifyInstance(instances.instance(i));
-            System.out.print(instances.classAttribute().value((int)instances.instance(i).classValue()));
+            System.out.print(instances.classAttribute().value((int) instances.instance(i).classValue()));
             System.out.println(instances.classAttribute().value((int) pred));
         }
 
         remove.setInputFormat(instances);
-        Instances newData = Filter.useFilter(instances,remove);
+        Instances newData = Filter.useFilter(instances, remove);
         System.out.println(newData);
     }
 }

@@ -2,16 +2,13 @@ package xm.rpc.client;
 
 import org.junit.Assert;
 import org.junit.Test;
-import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.stereotype.Service;
 
 /**
  * @author xuming
  */
-@RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations = "classpath:client/spring-zk-rpc-client.xml")
+@Service
 public class HelloServiceTest {
     @Autowired
     private RpcProxy rpcProxy;
