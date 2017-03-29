@@ -37,4 +37,6 @@ environment：jdk 1.8 language level：8
 - log4j2日志功能 log4j2 20170120
 - Netty的helloworld netty 20170228
 - 轻量级分布式rpc框架 rpc 20170301
+- Weka应用示例 weka 20170320
+- Json使用示例 json 20170329
 
