@@ -2,9 +2,6 @@ package xm.math.leetcode;
 
 import org.junit.Test;
 
-import java.util.HashMap;
-import java.util.Map;
-
 /**
  * Reverse digits of an integer.
  * <p>
@@ -78,31 +75,7 @@ public class ReverseInteger {
         System.out.println(result);
     }
 
-    public void test4() {
-        String q = "how  are   you";
-        Map map = new HashMap<>();
-        int count = 0;
-        for (int i = 0; i < q.length(); i++) {
-            if (q.indexOf("  ") > -1) {
-                map.put("  ", i);
-            }
-            if (q.indexOf("   ") > -1) {
-                map.put("   ", i);
-            }
-        }
-        String[] temp = (String[]) q.split(" ");
-        for (int i = temp.length; i > 0; i--) {
-            if (temp[i - 1].indexOf(" ") > -1)
-                System.out.print(temp[i - 1]);
-        }
 
-    }
-
-    @Test
-    public void test44() {
-        ReverseInteger reverseInteger = new ReverseInteger();
-        reverseInteger.test4();
-    }
 }
 
 
