@@ -10,7 +10,7 @@ public class Jpython {
     public static void main(String[] args) {
         try {
             System.out.println("start");
-            Process pr = Runtime.getRuntime().exec("python  D:\\PyCredit\\Blog\\BlogCode-source\\data\\extract_file.py");
+            Process pr = Runtime.getRuntime().exec("python  D:\\BlogCode-source\\data\\extract_file.py");
 
             BufferedReader in = new BufferedReader(new
                     InputStreamReader(pr.getInputStream()));
